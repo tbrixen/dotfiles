@@ -73,6 +73,9 @@ noremap <C-H> :bprev<CR>
 nnoremap <silent> gb :bnext<CR>
 nnoremap <silent> gB :bprevious<CR>
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 colorscheme molokai
 
 syntax enable

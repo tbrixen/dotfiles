@@ -1,0 +1,1 @@
+mklink %HOMEPATH%\_vimrc %~dp0.vimrc
