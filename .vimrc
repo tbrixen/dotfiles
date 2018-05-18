@@ -24,6 +24,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'python-mode/python-mode'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'jjaderberg/vim-ft-asciidoc'
+Plugin 'junegunn/vim-easy-align'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -193,4 +194,12 @@ nmap <leader>bl :BuffergatorOpen<cr>
 " Shared bindings from Solution #1 from earlier
 nmap <leader>T :enew<cr>
 nmap <leader>bq :bp <BAR> bd #<cr>
+" }}}
+
+" vim-easy-align ---------------------- {{{
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 " }}}
