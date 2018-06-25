@@ -5,7 +5,7 @@
   cob = checkout -b
 
   d = diff
-  dc = ditt --cached
+  ds = diff --staged
 
   s = status
   ss = status -s
