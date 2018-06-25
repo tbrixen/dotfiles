@@ -1,4 +1,14 @@
 [ALIAS]
-    co = checkout
-    alias = config --get-regexp alias
+  a = add
+  c = commit
+  co = checkout
+  cob = checkout -b
+
+  d = diff
+  dc = ditt --cached
+
+  s = status
+  ss = status -s
+
+  la = config --get-regexp alias
 
