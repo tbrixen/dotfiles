@@ -1,3 +1,4 @@
 [ALIAS]
     co = checkout
+    alias = config --get-regexp alias
 
