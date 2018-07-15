@@ -54,12 +54,12 @@ function insert_or_replace_into_file()
 
   create_file_if_absent "$FILE"
   
-  replace_text_and_banner "$BANNER_START" "$BANNER_STOP" "$FILE" "$TEXT_TO_INSERT"
-  
   if ! does_file_contains_text "$FILE" "$BANNER_START"; then
     echo $BANNER_START >> "$FILE"
-    echo "$TEXT_TO_INSERT" >> "$FILE"
+    echo -e "$TEXT_TO_INSERT" >> "$FILE"
     echo $BANNER_STOP >> "$FILE"
+  else
+    replace_text_and_banner "$BANNER_START" "$BANNER_STOP" "$FILE" "$TEXT_TO_INSERT"
   fi
 
 }
