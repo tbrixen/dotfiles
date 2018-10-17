@@ -25,6 +25,7 @@ Plugin 'python-mode/python-mode'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'jjaderberg/vim-ft-asciidoc'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
@@ -201,6 +202,12 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+" }}}
+
+
+" nerdtree ---------------------- {{{
+" Shortcut to open tree
+map <C-n> :NERDTreeToggle<CR>
 " }}}
 
 " git-gutter ---------------------- {{{
