@@ -25,6 +25,7 @@ Plugin 'python-mode/python-mode'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'jjaderberg/vim-ft-asciidoc'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -68,8 +69,6 @@ nnoremap <leader>w <Esc>:w<CR>
 
 noremap <C-J> :tabn<CR>
 noremap <C-K> :tabp<CR>
-noremap <C-L> :bnext<CR>
-noremap <C-H> :bprev<CR>
 
 nnoremap <silent> gb :bnext<CR>
 nnoremap <silent> gB :bprevious<CR>
@@ -202,4 +201,11 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+" }}}
+
+" git-gutter ---------------------- {{{
+nmap <C-L> <Plug>GitGutterNextHunk
+nmap <C-H> <Plug>GitGutterPrevHunk
+nmap <Leader>hv <Plug>GitGutterPreviewHunk
+set updatetime=100
 " }}}
