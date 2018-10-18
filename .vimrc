@@ -133,6 +133,8 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
+command Listcommands grep map $MYVIMRC
+
 " ========= Plugins ========= "
 " Markdown ---------------------- {{{
 autocmd BufRead,BufNewFile *.md set filetype=markdown 
