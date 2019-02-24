@@ -1,0 +1,19 @@
+# Get current file
+  % :p:h
+
+# Indent
+  :set shiftwidth=2
+
+# Execute as in normal mode (from visual mode)
+  : '<,'>normal @a
+
+# Replace
+  :%s//<C-r>0/g
+  <=>
+  :%s//\=@0/g
+
+# Replace
+  :%s/^.*>\(.*\)</\1
+  ^.*> starts with a >
+  \(.*\)< remembers all before the <
+  \1 insert all remembered

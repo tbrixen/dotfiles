@@ -1,0 +1,2 @@
+# Test if port is open
+nc -vz pi.local 3389

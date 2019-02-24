@@ -1,0 +1,42 @@
+Types of records:
+
+CNAME
+  Canonical name. The alias (left hand side) `bar.example.com`. is pointing to the canonical name (CNAME - actual name) `foo.example.com.`
+
+```
+NAME                    TYPE   VALUE
+--------------------------------------------------
+bar.example.com.        CNAME  foo.example.com.
+foo.example.com.        A      192.0.2.23
+When bar.example.com. is looked up, the lookop is restarted at foo.example.com.
+```
+
+NS
+  Name server
+
+A
+  IPv4 ip adress
+
+AAAA
+  IPv6 ip adress
+
+Lookup of dr.dk. (notice trailing dot is written for clarity) is done (in case of no caching) by querying a root dns server about who owns dr. From that answer select one of the name servers and ask for dr.dk. See example by issuing dig +trace dr.dk.
+
+Getting ip from dns
+```
+$ dig +short dr.dk
+159.20.6.38
+$ host dr.dk
+dr.dk has address 159.20.6.38
+dr.dk mail is handled by 20 dr-dk.mx2.comendosystems.net.
+dr.dk mail is handled by 10 dr-dk.mx1.comendosystems.com.
+```
+
+Lookup on specific name server
+```
+dig @1.1.1.1 dr.dk
+[...]
+; ANSWER SECTION:
+dr.dk.			47	IN	A	159.20.6.38
+[...]
+```

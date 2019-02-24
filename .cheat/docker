@@ -1,0 +1,14 @@
+# Remove unused data
+  docker {system,container,image,volume,network} prune
+
+# See how much data Docker is using
+  docker system df [-v]
+
+# Remove image
+  docker rmi the_image
+
+# Remove all dangling images
+  docker rmi $(docker images -qf "dangling=true")
+
+# Kill containers and remove them:
+  docker rm $(docker kill $(docker ps -sq))

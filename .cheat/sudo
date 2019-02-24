@@ -1,0 +1,10 @@
+Run commands as another user. Defaults to `root`.
+
+# List all commands current user can execute
+  sudo -l
+
+# Run command as another user
+  sudo -u someAdmin cat /etc/.passwd
+
+# Edit the sudoers
+  visudo

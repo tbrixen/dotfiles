@@ -1,0 +1,17 @@
+# Find open ports
+  netstat -abno
+
+# "Grep" output:
+  Select-String -Pattern "IPAddress"
+
+# Tee output to a file
+  ls | tee -file lsoutput.txt
+
+# Change the prompt
+  function prompt {"PS " + $(get-location) + "`n> "}
+
+# Change title of window
+  $host.ui.RawUI.WindowTitle = "The new name"
+
+# Test if port is open
+  Test-NetConnection <host or ip> -port 3389

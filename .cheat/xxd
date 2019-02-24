@@ -1,0 +1,2 @@
+# Hex string to binary file
+  echo "AB" | xxd -r -p > file.bin
