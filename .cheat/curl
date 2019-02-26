@@ -1,0 +1,22 @@
+# Download a single file
+curl http://path.to.the/file
+
+# Fetch only the HTTP headers from a response
+curl -I http://example.com
+
+# POST to a form
+curl -F "name=user" -F "password=test" http://example.com
+
+# POST JSON Data
+curl -H "Content-Type: application/json" -X POST -d '{"user":"bob","pass":"123"}' http://example.com
+
+# Download a file with a Proxy
+curl -x proxysever.server.com:PORT http://addressiwantto.access
+
+
+
+curl -x localhost:8080 \
+     -H "Content-Type: application/xml"\
+     -X POST \
+     -d '<?xml version="1.0"?> <foo>bar</foo>' \
+     http://192.168.0.37/login
