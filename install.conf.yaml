@@ -3,7 +3,7 @@
 - link:
     ~/.dotfiles: ''
     ~/.bashrc:
-    ~/.tmux.conf: tmux.conf
+    ~/.tmux.conf:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
