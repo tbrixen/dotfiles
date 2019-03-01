@@ -5,6 +5,7 @@
     ~/.bashrc:
     ~/.tmux.conf:
     ~/.gitconfig:
+    ~/.cheat:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
