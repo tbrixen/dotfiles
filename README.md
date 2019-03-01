@@ -17,7 +17,5 @@ Making local customizations
 * `.bashrc` : `~/.bashrc_local_before` runs first
 * `.bashrc` : `~/.bashrc_local_after` runs after
 
-License
--------
 
 [dotbot]: https://github.com/anishathalye/dotbot
