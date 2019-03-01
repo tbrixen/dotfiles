@@ -2,6 +2,7 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.bashrc:
     ~/.tmux.conf: tmux.conf
 
 - shell:
