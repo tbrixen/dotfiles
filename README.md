@@ -10,6 +10,12 @@ How to use
     $ cd dotfiles
     $ ./install
 
+The vim plugin YouCompleteMe is included. For this to work it must be compiled. This requires `python` and `cmake`. Install the plugin using
+
+    $ vim/bundle/YouCompleteMe/install.py
+
+Windows users see https://bitbucket.org/Alexander-Shukaev/vim-youcompleteme-for-windows.
+
 Making local customizations
 ---------------------------
 
