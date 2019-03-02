@@ -3,39 +3,6 @@ set nocompatible
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
-"" Vundle ---------------------- {{{
-"set nocompatible              " be iMproved, required
-"filetype off                  " required
-"
-"" set the runtime path to include Vundle and initialize
-"" Vundle for windows: Follow https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
-"set rtp+=$HOME/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"
-"" let Vundle manage Vundle, required
-"Plugin 'VundleVim/Vundle.vim'
-"
-"Plugin 'flazz/vim-colorschemes'
-"Plugin 'tpope/vim-surround'
-"Plugin 'tpope/vim-sensible'
-"Plugin 'tpope/vim-repeat'
-"Plugin 'bling/vim-airline'
-"Plugin 'ervandew/supertab'
-"" To install YouCompleteMe in windows see https://bitbucket.org/Alexander-Shukaev/vim-youcompleteme-for-windows
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'w0rp/ale'
-"Plugin 'Yggdroot/indentLine'
-"Plugin 'ctrlpvim/ctrlp.vim'
-"Plugin 'python-mode/python-mode'
-"Plugin 'jeetsukumaran/vim-buffergator'
-"Plugin 'jjaderberg/vim-ft-asciidoc'
-"Plugin 'junegunn/vim-easy-align'
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'airblade/vim-gitgutter'
-"
-"" All of your Plugins must be added before the following line
-"call vundle#end()            " required
-"" }}}
 filetype plugin indent on    " Automatically detect file types
 
 set showcmd               " Display incomplete commands
