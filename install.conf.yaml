@@ -14,7 +14,7 @@
   - [git submodule update --init --recursive, Installing submodules]
   - 
     command: vim/bundle/YouCompleteMe/install.py
-    description: Installing you completeme
+    description: Installing vim plugin YouCompleteMe
     stdout: true
     stderr: true
 
