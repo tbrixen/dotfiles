@@ -15,7 +15,7 @@
   la = config --get-regexp alias
 
 [core]
-	excludesfile = ~/.cvsignore
+  excludesfile = ~/.cvsignore
 
 # Allow local customizations in the .gitconfig_local file
 [include]
