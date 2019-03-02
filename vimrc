@@ -49,7 +49,7 @@ nnoremap <silent> gB :bprevious<CR>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
-silent! colorscheme molokai
+silent! colorscheme molokayo
 
 syntax enable
 if has("gui_running")
