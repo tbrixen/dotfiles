@@ -1,3 +1,6 @@
+@echo [+] Creating symlink to %~dp0bashrc from %HOMEPATH%\.bashrc
+@mklink %HOMEPATH%\.bashrc %~dp0bashrc
+
 @echo [+] Creating symlink to %~dp0vimrc from %HOMEPATH%\_vimrc
 @mklink %HOMEPATH%\_vimrc %~dp0vimrc
 
