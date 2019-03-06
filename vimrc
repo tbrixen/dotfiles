@@ -190,3 +190,12 @@ nmap <C-H> <Plug>GitGutterPrevHunk
 nmap <Leader>hv <Plug>GitGutterPreviewHunk
 set updatetime=100
 " }}}
+
+" vim-unimparied ---------------------- {{{
+nmap < [
+nmap > ]
+omap < [
+omap > ]
+xmap < [
+xmap > ]
+" }}}
