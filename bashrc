@@ -19,6 +19,9 @@ alias d='docker'
 alias dc='docker-compose'
 alias grep='grep --color'
 
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
+alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
+
 # Allow local customizations in the ~/.bashrc_local_after file
 if [ -f ~/.bashrc_local_after ]; then
     source ~/.bashrc_local_after
