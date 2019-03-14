@@ -177,11 +177,6 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 " }}}
 
-" nerdtree ---------------------- {{{
-" Shortcut to open tree
-map <C-n> :NERDTreeToggle<CR>
-" }}}
-
 " git-gutter ---------------------- {{{
 nmap <C-L> <Plug>GitGutterNextHunk
 nmap <C-H> <Plug>GitGutterPrevHunk
