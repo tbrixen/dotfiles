@@ -105,6 +105,11 @@ augroup END
 
 command Listcommands grep map $MYVIMRC
 
+if executable('rg')
+    set grepprg=rg\ --vimgrep
+    set grepformat=%f:%l:%c:%m
+endif
+
 " ========= Plugins ========= "
 " Markdown ---------------------- {{{
 autocmd BufRead,BufNewFile *.md set filetype=markdown 
