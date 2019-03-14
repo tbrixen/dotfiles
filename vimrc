@@ -5,6 +5,8 @@ call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on    " Automatically detect file types
 
+set termguicolors
+
 set showcmd               " Display incomplete commands
 set number
 set showmode
