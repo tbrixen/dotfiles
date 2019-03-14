@@ -45,9 +45,6 @@ nnoremap <leader>w <Esc>:w<CR>
 noremap <C-J> :tabn<CR>
 noremap <C-K> :tabp<CR>
 
-nnoremap <silent> gb :bnext<CR>
-nnoremap <silent> gB :bprevious<CR>
-
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
@@ -63,7 +60,7 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
-" set backspace=indent,eol,start
+
 set ttimeout
 set ttimeoutlen=50
 set laststatus=2
@@ -71,7 +68,6 @@ set laststatus=2
 " Enable jump between keywords
 " [Niel] p 128
 runtime macros/matchit.vim
-
 
 " Tabs
 set smartindent
@@ -128,6 +124,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 " }}}
+
 " YouCompleteMe ---------------------- {{{
 " Only do autocomplete in the following files
 let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1, 'java':1 }
@@ -179,7 +176,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 " }}}
-
 
 " nerdtree ---------------------- {{{
 " Shortcut to open tree
