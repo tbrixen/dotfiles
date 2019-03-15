@@ -145,7 +145,6 @@ let g:pymode_lint = 0
 " CtrlP ---------------------- {{{
 let g:ctrlp_working_path_mode = 'r'
 " Easy bindings for its various modes
-nmap <leader>bb :CtrlPBuffer<cr>
 nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
 " }}}
@@ -199,9 +198,13 @@ xmap > ]
 " }}}
 
 " fzf ---------------------- {{{
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
+nmap <leader>bb :Buffers<cr>
+nmap <leader>ff :Files<cr>
+nmap <leader>ll :Lines<cr>
 " }}}
 
