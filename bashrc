@@ -22,6 +22,17 @@ alias grep='grep --color'
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
 alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
 
+vg() {
+  local file
+
+  file="$(rg --no-heading $@ | fzf -0 -1 | awk -F: '{print $1}')"
+
+  if [[ -n $file ]]
+  then
+     vim $file
+  fi
+}
+
 # fd - cd to selected directory
 fd() {
   local dir
