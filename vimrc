@@ -1,12 +1,9 @@
-set nocompatible
-
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
-filetype plugin indent on    " Automatically detect file types
 
-set termguicolors
-
+" OPTIONS ---------------------- {{{
+set nocompatible
 set showcmd               " Display incomplete commands
 set number
 set showmode
@@ -28,6 +25,44 @@ set hlsearch            " highlight searches
 set incsearch           " do incremental searching
 set showmatch           " jump to matches when entering regexp
 
+set ttimeout
+set ttimeoutlen=50
+set laststatus=2
+
+" Tabs
+set smartindent
+set tabstop=2       " The width of a TAB is set to 2.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 2.
+set shiftwidth=2    " Indents will have a width of 2
+set softtabstop=2   " Set the number of columns for at TAB
+set expandtab       " Expand TABs to space
+
+set colorcolumn=80
+
+if executable('rg')
+    set grepprg=rg\ --vimgrep
+    set grepformat=%f:%l:%c:%m
+endif
+
+" Sets in-line spellchecking
+" Guide: http://www.tjansson.dk/2008/10/writing-large-latex-documents-in-vim/
+" UNCOMMENT for spellchecking
+" Set local language 
+setlocal spell spelllang=en_us
+" setlocal spell spelllang=da
+" set spell
+set nospell
+
+" Enable jump between keywords
+" [Niel] p 128
+runtime macros/matchit.vim
+
+filetype plugin indent on    " Automatically detect file types
+" }}}
+
+" KEY MAPS ---------------------- {{{
 " Clear the search highlight
 nnoremap <CR> :noh<CR><CR>"
 
@@ -48,6 +83,11 @@ noremap <C-K> :tabp<CR>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
+" }}}
+
+" COLORS ---------------------- {{{
+set termguicolors
+
 silent! colorscheme molokayo
 
 syntax enable
@@ -61,56 +101,27 @@ if has("gui_running")
   endif
 endif
 
-set ttimeout
-set ttimeoutlen=50
-set laststatus=2
+" }}}
 
-" Enable jump between keywords
-" [Niel] p 128
-runtime macros/matchit.vim
-
-" Tabs
-set smartindent
-set tabstop=2       " The width of a TAB is set to 2.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 2.
-set shiftwidth=2    " Indents will have a width of 2
-set softtabstop=2   " Set the number of columns for at TAB
-set expandtab       " Expand TABs to space
-
-set colorcolumn=80
-
+" CUSTOM COMMANDS AND FUNCTIONS ---------------------- {{{
 " Insert time
 " Advanced use: strftime("%Y-%m-%d %a %H:%M %p")
 nmap <F3> i<C-R>=strftime("%H:%M %p")<CR><Esc>
 imap <F3> <C-R>=strftime("%H:%M %p")<CR>
 
+command Listcommands grep map $MYVIMRC
+" }}}
 
-" Sets in-line spellchecking
-" Guide: http://www.tjansson.dk/2008/10/writing-large-latex-documents-in-vim/
-" UNCOMMENT for spellchecking
-" Set local language 
-setlocal spell spelllang=en_us
-" setlocal spell spelllang=da
-" set spell
-set nospell
-
-
-" Autofold
+" FILE TYPE TRIGGERS ---------------------- {{{
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
+" }}}
 
-command Listcommands grep map $MYVIMRC
+" PLUGINS SETTINGS ---------------------- {{{
 
-if executable('rg')
-    set grepprg=rg\ --vimgrep
-    set grepformat=%f:%l:%c:%m
-endif
 
-" ========= Plugins ========= "
 " Markdown ---------------------- {{{
 autocmd BufRead,BufNewFile *.md set filetype=markdown 
 nnoremap <Leader>pp :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
@@ -206,5 +217,7 @@ let g:fzf_action = {
 nmap <leader>bb :Buffers<cr>
 nmap <leader>ff :Files<cr>
 nmap <leader>ll :Lines<cr>
+" }}}
+
 " }}}
 
