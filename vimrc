@@ -86,8 +86,6 @@ cmap w!! w !sudo tee > /dev/null %
 " }}}
 
 " COLORS ---------------------- {{{
-set termguicolors
-
 silent! colorscheme molokayo
 
 syntax enable
