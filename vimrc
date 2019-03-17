@@ -4,79 +4,68 @@ call pathogen#helptags()
 
 " OPTIONS ---------------------- {{{
 set nocompatible
-set showcmd               " Display incomplete commands
-set number
-set showmode
-set hidden                " See :h hidden
-set wildmenu
-set wildmode=list:longest
-set cursorline
-set ttyfast
-set laststatus=2
-set relativenumber
-set ruler                 " Displayer row and col
-
-set encoding=utf-8
+set showcmd         " Display incomplete commands
+set relativenumber  " Show line number relative to line of cursor
+set number          " Show line number of cursor
+set cursorline      " Highlight screen line of cursor
+set hidden          " Don't prompt to save hidden windows
+set wildmenu        " Show possible completion on command line
+set wildmode=list:longest " List all options, and complete with the most common
+set laststatus=2    " Always show status line
+set encoding=utf-8  " Make vim work in UTF-8
 
 " Search
-set ignorecase          " Ignore case 
-set smartcase           " if I do search for somethin uppercase, use case
-set hlsearch            " highlight searches
-set incsearch           " do incremental searching
-set showmatch           " jump to matches when entering regexp
+set ignorecase      " Case insensitive
+set smartcase       " Override ignorecase, if searching for uppercase
+set hlsearch        " Highlight searches
+set incsearch       " While typing, show matches
+set showmatch       " Briefly jump to matching bracket during insert
 
-set ttimeout
-set ttimeoutlen=50
-set laststatus=2
+set ttyfast         " Improve smoothness, by redraw whole window for each char
+set ttimeoutlen=50  " Only wait 50 ms to assume a :mapping is done
 
 " Tabs
-set smartindent
-set tabstop=2       " The width of a TAB is set to 2.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 2.
-set shiftwidth=2    " Indents will have a width of 2
-set softtabstop=2   " Set the number of columns for at TAB
-set expandtab       " Expand TABs to space
+set smartindent     " Do automatic indent on c-like programs
+set autoindent      " Copy indent when starting a new line
+set expandtab       " In insert mode, use spaces when pressing <tab>
+set tabstop=2       " Number of spaces a \t counts for 
+set softtabstop=2   " Number of spaces a \t count for during editing
+set shiftwidth=2    " Number of spaces for each step of (auto)indent
 
-set colorcolumn=80
+set colorcolumn=80 
 
+" If RipGrep is available, use it for grep
 if executable('rg')
     set grepprg=rg\ --vimgrep
     set grepformat=%f:%l:%c:%m
 endif
 
-" Sets in-line spellchecking
-" Guide: http://www.tjansson.dk/2008/10/writing-large-latex-documents-in-vim/
-" UNCOMMENT for spellchecking
-" Set local language 
-setlocal spell spelllang=en_us
-" setlocal spell spelllang=da
-" set spell
-set nospell
-
 " Enable jump between keywords
 " [Niel] p 128
 runtime macros/matchit.vim
 
-filetype plugin indent on    " Automatically detect file types
+filetype plugin indent on " Automatically detect file types
 " }}}
 
 " KEY MAPS ---------------------- {{{
-" Clear the search highlight
-nnoremap <CR> :noh<CR><CR>"
-
-" Moving around bracket pairs by tab
-nnoremap <tab> %
-vnoremap <tab> %
-
 " Make space the leader
 map <SPACE> <leader>
 
+" Clear the search highlight
+nnoremap <CR> :noh<CR><CR>"
+
+" Jump between bracket pairs by tab
+nnoremap <tab> %
+vnoremap <tab> %
+
+" Maps to escape insert mode
 noremap <C-c> <Esc>
 inoremap jk <Esc>
+
+" Save buffer using leader
 nnoremap <leader>w <Esc>:w<CR>
 
+" Move between tabs
 noremap <C-J> :tabn<CR>
 noremap <C-K> :tabp<CR>
 
@@ -118,7 +107,6 @@ augroup END
 " }}}
 
 " PLUGINS SETTINGS ---------------------- {{{
-
 
 " Markdown ---------------------- {{{
 autocmd BufRead,BufNewFile *.md set filetype=markdown 
