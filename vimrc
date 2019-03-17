@@ -13,6 +13,8 @@ set wildmenu        " Show possible completion on command line
 set wildmode=list:longest " List all options, and complete with the most common
 set laststatus=2    " Always show status line
 set encoding=utf-8  " Make vim work in UTF-8
+set list            " Show whitespace as special chars - see listchars
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:· " Unicode characters for various things
 
 " Search
 set ignorecase      " Case insensitive
@@ -32,7 +34,7 @@ set tabstop=2       " Number of spaces a \t counts for
 set softtabstop=2   " Number of spaces a \t count for during editing
 set shiftwidth=2    " Number of spaces for each step of (auto)indent
 
-set colorcolumn=80 
+set colorcolumn=80
 
 " If RipGrep is available, use it for grep
 if executable('rg')
@@ -151,7 +153,7 @@ nmap <leader>bs :CtrlPMRU<cr>
 let g:buffergator_viewport_split_policy = 'R'
 
 " I want my own keymappings...
-let g:buffergator_suppress_keymaps = 1
+  let g:buffergator_suppress_keymaps = 1
 
 " Looper buffers
 "let g:buffergator_mru_cycle_loop = 1
