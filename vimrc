@@ -71,6 +71,9 @@ nnoremap <leader>w <Esc>:w<CR>
 noremap <C-J> :tabn<CR>
 noremap <C-K> :tabp<CR>
 
+" Marks should go to the column, not just the line. Why isn't this the default?
+nnoremap ' `
+
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
