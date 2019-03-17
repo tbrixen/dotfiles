@@ -28,9 +28,6 @@
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
 	url = https://github.com/python-mode/python-mode
-[submodule "vim/bundle/vim-buffergator"]
-	path = vim/bundle/vim-buffergator
-	url = https://github.com/jeetsukumaran/vim-buffergator
 [submodule "vim/bundle/vim-ft-asciidoc"]
 	path = vim/bundle/vim-ft-asciidoc
 	url = https://github.com/jjaderberg/vim-ft-asciidoc
