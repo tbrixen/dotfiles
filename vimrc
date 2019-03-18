@@ -189,5 +189,9 @@ nmap <leader>ff :Files<cr>
 nmap <leader>ll :Lines<cr>
 " }}}
 
+" tagbar ---------------------- {{{
+nmap <F7> :TagbarToggle<CR>
+" }}}
+
 " }}}
 

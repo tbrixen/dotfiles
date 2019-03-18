@@ -58,3 +58,6 @@
 [submodule "vim/bundle/vim-rooter"]
 	path = vim/bundle/vim-rooter
 	url = https://github.com/airblade/vim-rooter
+[submodule "vim/bundle/tagbar"]
+	path = vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
