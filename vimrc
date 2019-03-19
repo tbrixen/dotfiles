@@ -193,5 +193,10 @@ nmap <leader>ll :Lines<cr>
 nmap <F7> :TagbarToggle<CR>
 " }}}
 
+" Ack ---------------------- {{{
+" Tell ack.vim to use ripgrep instead
+let g:ackprg = 'rg --vimgrep --no-heading'
+" }}}
+
 " }}}
 
