@@ -198,5 +198,9 @@ nmap <F7> :TagbarToggle<CR>
 let g:ackprg = 'rg --vimgrep --no-heading'
 " }}}
 
+" Vim-rooter ---------------------- {{{
+let g:rooter_patterns = ['vimrooter', '.git/']
+" }}}
+
 " }}}
 
