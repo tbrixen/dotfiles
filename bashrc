@@ -18,7 +18,7 @@ alias ga='git add'
 alias gau='git add --update'
 alias gloga='git log --oneline --graph --decorate --all'
 alias d='docker'
-alias dc='docker-compose'
+alias dco='docker-compose'
 alias grep='grep --color'
 
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
