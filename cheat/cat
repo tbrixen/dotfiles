@@ -1,0 +1,2 @@
+# Create a file from contents from stdin
+cat > file.txt
