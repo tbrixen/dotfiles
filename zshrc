@@ -29,7 +29,7 @@ COMPLETION_WAITING_DOTS="true"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git )
+plugins=(git osx ant docker-compose nmap rsync sudo tmux)
 
 source $ZSH/oh-my-zsh.sh
 
