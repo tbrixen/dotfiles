@@ -1,0 +1,3 @@
+# UGO notation
+# Add execution rights for user and group, remove write from other, add read to user group and other.
+chmod ug+x,o-w,+r file.txt
