@@ -1,0 +1,5 @@
+# Processes invoked by current user and running in current terminal
+ps
+
+# Show all processes run by all users
+ps aux
