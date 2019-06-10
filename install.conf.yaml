@@ -1,8 +1,9 @@
 - clean: ['~']
 
 - link:
-    ~/.oh-my-zsh:
-
+    ~/.powerlevel10k: zsh-extras/powerlevel10k
+    ~/.oh-my-zsh:     zsh-extras/oh-my-zsh
+    ~/.purepower:     zsh-extras/purepower/dotfiles-public/.purepower
 
 - link:
     ~/.dotfiles: ''

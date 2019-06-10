@@ -3,7 +3,7 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="ys"
+#ZSH_THEME="ys"
 
 # Hyphen-insensitive completion. _ and - will be interchangeable.
 # Case-sensitive completion must be off.  
@@ -34,4 +34,5 @@ plugins=(git osx ant docker-compose nmap rsync sudo tmux)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
+source ~/.purepower
