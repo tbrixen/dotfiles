@@ -1,0 +1,5 @@
+# See the last 3 lines
+tail -n-3 file.txt
+
+# See all lines from line 5 and downwards
+tail -n+5 file.txt
