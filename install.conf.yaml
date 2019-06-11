@@ -1,5 +1,8 @@
 - clean: ['~']
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
 - link:
     ~/.powerlevel10k: zsh-extras/powerlevel10k
     ~/.oh-my-zsh:     zsh-extras/oh-my-zsh
@@ -16,6 +19,4 @@
     ~/.cvsignore:
     ~/.zshrc:
 
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
 
