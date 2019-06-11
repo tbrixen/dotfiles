@@ -1,0 +1,5 @@
+# See lines from start to line 3
+head -n+3 file.txt
+
+# See lines from start to 5th last line
+head -n-3 file.txt
