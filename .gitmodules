@@ -73,3 +73,6 @@
 [submodule "zsh-extras/oh-my-zsh"]
 	path = zsh-extras/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh
+[submodule "zsh-extras/zsh-autosuggestions"]
+	path = zsh-extras/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions

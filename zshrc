@@ -48,3 +48,5 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 source ~/.purepower
+source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
+
