@@ -47,5 +47,5 @@ fpath=("$HOME/.zfunctions" $fpath)
 source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
 
 autoload -U promptinit; promptinit
+zstyle :prompt:pure:prompt:success color green
 prompt pure
-
