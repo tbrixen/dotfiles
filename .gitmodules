@@ -64,15 +64,12 @@
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
-[submodule "zsh-extras/powerlevel10k"]
-	path = zsh-extras/powerlevel10k
-	url = https://github.com/romkatv/powerlevel10k
-[submodule "zsh-extras/purepower/dotfiles-public"]
-	path = zsh-extras/purepower/dotfiles-public
-	url = https://github.com/romkatv/dotfiles-public
 [submodule "zsh-extras/oh-my-zsh"]
 	path = zsh-extras/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh
 [submodule "zsh-extras/zsh-autosuggestions"]
 	path = zsh-extras/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh-extras/pure"]
+	path = zsh-extras/pure
+	url = https://github.com/sindresorhus/pure.git

@@ -4,9 +4,13 @@
   - [git submodule update --init --recursive, Installing submodules]
 
 - link:
-    ~/.powerlevel10k: zsh-extras/powerlevel10k
     ~/.oh-my-zsh:     zsh-extras/oh-my-zsh
-    ~/.purepower:     zsh-extras/purepower/dotfiles-public/.purepower
+    ~/.zfunctions/prompt_pure_setup: 
+      create: true
+      path: zsh-extras/pure/pure.zsh
+    ~/.zfunctions/async: 
+      create: true
+      path: zsh-extras/pure/async.zsh
     ~/.zsh-autosuggestions:     zsh-extras/zsh-autosuggestions
 
 - link:

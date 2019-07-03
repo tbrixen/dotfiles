@@ -43,7 +43,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
-source ~/.purepower
+fpath=("$HOME/.zfunctions" $fpath)
 source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
+
+autoload -U promptinit; promptinit
+prompt pure
 
