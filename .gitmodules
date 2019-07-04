@@ -73,3 +73,6 @@
 [submodule "zsh-extras/pure"]
 	path = zsh-extras/pure
 	url = https://github.com/sindresorhus/pure.git
+[submodule "zsh-extras/zcustom/plugins/you-should-use"]
+	path = zsh-extras/zcustom/plugins/you-should-use
+	url = https://github.com/MichaelAquilina/zsh-you-should-use.git

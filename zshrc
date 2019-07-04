@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export ZSH="$HOME/.oh-my-zsh"
+export ZSH_CUSTOM="$HOME/.zcustom"
 
 #ZSH_THEME="ys"
 
@@ -39,6 +40,9 @@ plugins=(
   tmux
   ansible
 )
+
+plugins=(you-should-use $plugins)
+
 
 source $ZSH/oh-my-zsh.sh
 

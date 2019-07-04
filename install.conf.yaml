@@ -5,7 +5,8 @@
 
 - link:
     ~/.oh-my-zsh:     zsh-extras/oh-my-zsh
-    ~/.zfunctions/prompt_pure_setup: 
+    ~/.zcustom: zsh-extras/zcustom
+    ~/.zfunctions/prompt_pure_setup:
       create: true
       path: zsh-extras/pure/pure.zsh
     ~/.zfunctions/async: 
