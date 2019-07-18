@@ -76,3 +76,6 @@
 [submodule "zsh-extras/zcustom/plugins/you-should-use"]
 	path = zsh-extras/zcustom/plugins/you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
+[submodule "vim/bundle/plantuml-syntax"]
+	path = vim/bundle/plantuml-syntax
+	url = git@github.com:aklt/plantuml-syntax.git
