@@ -152,6 +152,7 @@ let g:ctrlp_working_path_mode = 'r'
 " Easy bindings for its various modes
 nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
+nmap <leader>o :CtrlPBuffer<cr>
 " }}}
 
 " vim-easy-align ---------------------- {{{
@@ -184,8 +185,6 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
-nmap <leader>bb :Buffers<cr>
-nmap <leader>ff :Files<cr>
 nmap <leader>ll :Lines<cr>
 " }}}
 
