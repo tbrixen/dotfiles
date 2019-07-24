@@ -135,14 +135,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 " }}}
 
-" YouCompleteMe ---------------------- {{{
-" Only do autocomplete in the following files
-let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1, 'java':1 }
-
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" }}}
-
 " PyMode ---------------------- {{{
 let g:pymode_lint = 0
 " }}}
