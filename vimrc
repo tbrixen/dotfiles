@@ -90,7 +90,7 @@ nnoremap ,f :find **/*<C-z><S-Tab>
 " }}}
 
 " COLORS ---------------------- {{{
-silent! colorscheme molokayo
+silent! colorscheme snazzy
 
 syntax enable
 if has("gui_running")
