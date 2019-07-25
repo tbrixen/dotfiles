@@ -80,6 +80,13 @@ cmap w!! w !sudo tee > /dev/null %
 " Remove current buffer from buffer list
 nmap <leader>bq :bp <BAR> bd #<cr>
 
+" As default, don't :find in /usr/include
+set path-=/usr/include
+
+" Edit and find recursively
+set wildcharm=<C-z>
+nnoremap ,e :e **/*<C-z><S-Tab>
+nnoremap ,f :find **/*<C-z><S-Tab>
 " }}}
 
 " COLORS ---------------------- {{{
