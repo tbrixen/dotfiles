@@ -82,3 +82,6 @@
 [submodule "vim/bundle/vim-snazzy"]
 	path = vim/bundle/vim-snazzy
 	url = git@github.com:connorholyday/vim-snazzy.git
+[submodule "vim/bundle/vim-visual-star-search"]
+	path = vim/bundle/vim-visual-star-search
+	url = git@github.com:bronson/vim-visual-star-search.git
