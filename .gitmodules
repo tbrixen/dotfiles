@@ -75,13 +75,13 @@
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
 [submodule "vim/bundle/plantuml-syntax"]
 	path = vim/bundle/plantuml-syntax
-	url = git@github.com:aklt/plantuml-syntax.git
+	url = https://github.com/aklt/plantuml-syntax.git
 [submodule "vim/bundle/vim-vinegar"]
 	path = vim/bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
 [submodule "vim/bundle/vim-snazzy"]
 	path = vim/bundle/vim-snazzy
-	url = git@github.com:connorholyday/vim-snazzy.git
+	url = https://github.com/connorholyday/vim-snazzy.git
 [submodule "vim/bundle/vim-visual-star-search"]
 	path = vim/bundle/vim-visual-star-search
-	url = git@github.com:bronson/vim-visual-star-search.git
+	url = https://github.com/bronson/vim-visual-star-search.git
