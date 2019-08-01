@@ -43,7 +43,6 @@ plugins=(
 
 plugins=(you-should-use $plugins)
 
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -54,7 +53,6 @@ autoload -U promptinit; promptinit
 zstyle :prompt:pure:prompt:success color green
 prompt pure
 
-
 function options() {
     PLUGIN_PATH="$HOME/.oh-my-zsh/plugins/"
     for plugin in $plugins; do
@@ -62,3 +60,5 @@ function options() {
     done
 }
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
