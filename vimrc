@@ -152,6 +152,9 @@ let g:ctrlp_working_path_mode = 'r'
 nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
 nmap <leader>o :CtrlPBuffer<cr>
+" Don't jump to viewport with buffer, but use corrent viewport
+" This helps to restore splits on the same buffer
+let g:ctrlp_switch_buffer = 0
 " }}}
 
 " vim-easy-align ---------------------- {{{
