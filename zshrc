@@ -62,3 +62,8 @@ function options() {
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Allow local customizations in the ~/.zshrc_local_after file
+if [ -f ~/.zshrc_local_after ]; then
+    source ~/.zshrc_local_after
+fi
