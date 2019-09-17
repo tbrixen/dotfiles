@@ -206,6 +206,7 @@ let g:rooter_patterns = ['vimrooter', '.git/']
 " Vim-FuzzyFinder ---------------------- {{{
 nmap <leader>f :FufFile<cr>
 nmap <leader>F :FufFileWithCurrentBufferDir<cr>
+command Cd :FufDir
 let g:fuf_keyPreview = '<C-v>'
 let g:fuf_previewHeight = 10
 let g:fuf_autoPreview = 1
