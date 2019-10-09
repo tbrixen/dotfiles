@@ -23,5 +23,15 @@ Making local customizations
 * `.bashrc` : `~/.bashrc_local_before` runs first
 * `.bashrc` : `~/.bashrc_local_after` runs after
 
+Updating submodules
+-------------------
+
+    $ git submodule add
+    $ git submodule update --remote --merge
+	$ git submodule foreach --recursive 'git reset --hard'
+	$ git status
+	$ # Then, for each submodule with 'new commits', do a 'git add <submodule path>'
+	
+
 
 [dotbot]: https://github.com/anishathalye/dotbot
