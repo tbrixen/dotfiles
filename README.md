@@ -32,4 +32,7 @@ Updating submodules
   $ git status
   $ # Then, for each submodule with 'new commits', do a 'git add <submodule path>'
 
+References
+----------
+
 [dotbot]: https://github.com/anishathalye/dotbot
