@@ -26,7 +26,12 @@ Making local customizations
 Updating submodules
 -------------------
 
-    $ git submodule add
+Updating the local submodules to the versions specified in this repository
+
+    $ git submodule update --remote --merge
+    
+Updating submodules to the current version on their respective remotes
+
     $ git submodule update --remote --merge
     $ git submodule foreach --recursive 'git reset --hard'
     $ git status
