@@ -119,6 +119,9 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
+
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
 " }}}
 
 " PLUGINS SETTINGS ---------------------- {{{
