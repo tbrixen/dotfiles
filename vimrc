@@ -220,5 +220,11 @@ let g:fuf_keyOpenVsplit = '<C-V>'
 let g:fuf_keyOpenTabpage = '<C-T>'
 " }}}
 
+" ale ---------------------- {{{
+let g:ale_linters = {
+\   'sh': ['shellcheck'],
+\}
+" }}}
+
 " }}}
 
