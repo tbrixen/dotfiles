@@ -28,6 +28,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
+  fzf
   git
   osx
   ant
