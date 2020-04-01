@@ -77,8 +77,9 @@ nnoremap ' `
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
-" Remove current buffer from buffer list
-nmap <leader>bq :bp <BAR> bd #<cr>
+" Remove current buffer from buffer list without closing window
+cmap bq  :bp <BAR> bd #<cr>
+cmap bq! :bp <BAR> bd! #<cr>
 
 " As default, don't :find in /usr/include
 set path-=/usr/include
