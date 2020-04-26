@@ -22,6 +22,7 @@ Making local customizations
 * `.gitignore` : `~/.gitignore_local`
 * `.bashrc` : `~/.bashrc_local_before` runs first
 * `.bashrc` : `~/.bashrc_local_after` runs after
+* `.zshrc` : `~/.zshrc_local_after` runs after
 
 Updating submodules
 -------------------
