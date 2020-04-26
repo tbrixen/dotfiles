@@ -67,9 +67,11 @@ inoremap jk <Esc>
 " Save buffer using leader
 nnoremap <leader>w <Esc>:w<CR>
 
-" Move between tabs
-noremap <C-J> :tabn<CR>
-noremap <C-K> :tabp<CR>
+" Move between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Marks should go to the column, not just the line. Why isn't this the default?
 nnoremap ' `
