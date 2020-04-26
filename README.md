@@ -39,7 +39,7 @@ Updating submodules to the current version on their respective remotes
     $ # Then, for each submodule with 'new commits', do a 'git add <submodule path>'
     
 Vim and Tmux integration
--------------------- 
+------------------------
 
 The Vim plugin [vim-tmux-navigation](https://github.com/christoomey/vim-tmux-navigator) together with the Tmux plugin [vim-tmux-navigation](https://github.com/christoomey/vim-tmux-navigator) provides seamless split/pane navigation using the following key-bindings
 
