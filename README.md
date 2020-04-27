@@ -38,6 +38,16 @@ Updating submodules to the current version on their respective remotes
     $ git status
     $ # Then, for each submodule with 'new commits', do a 'git add <submodule path>'
     
+Add a plugin to Vim
+----------------------
+
+Add it as a sub-module, and reload vim
+
+    $ cd vim/bundle/
+    $ git submodule add https://url-to-clone
+
+To check if it has been loaded, source the `vimrc`, run `:version` and check that it is in the list.
+
 Vim and Tmux integration
 ------------------------
 
