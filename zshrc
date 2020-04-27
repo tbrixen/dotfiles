@@ -65,6 +65,9 @@ export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Press Ctrl + Space to accept and execute a suggestion from zsh-autosuggestions
+bindkey '^ ' autosuggest-execute
+
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zshrc_local_after ]; then
     source ~/.zshrc_local_after
