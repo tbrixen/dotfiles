@@ -172,9 +172,10 @@ nmap ga <Plug>(EasyAlign)
 " }}}
 
 " git-gutter ---------------------- {{{
-nmap <C-L> <Plug>GitGutterNextHunk
-nmap <C-H> <Plug>GitGutterPrevHunk
-nmap <Leader>hv <Plug>GitGutterPreviewHunk
+nmap <leader>ghn <Plug>GitGutterNextHunk
+nmap <leader>ghp <Plug>GitGutterPrevHunk
+nmap <Leader>ghv <Plug>GitGutterPreviewHunk
+nmap <Leader>ghu <Plug>GitGutterUndoHunk
 set updatetime=100
 " }}}
 
@@ -227,6 +228,12 @@ let g:fuf_keyOpenTabpage = '<C-T>'
 let g:ale_linters = {
 \   'sh': ['shellcheck'],
 \}
+" }}}
+
+" vim-json ---------------------- {{{
+" workaround needed when you use elzr/vim-json with indentLine
+" https://github.com/elzr/vim-json/issues/23
+let g:indentLine_noConcealCursor=""
 " }}}
 
 " }}}
