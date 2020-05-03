@@ -1,0 +1,3 @@
+# See nameservers associated with domain
+# (to see e.g. mailservers, use mx instad of ns)
+dig example.com ns
