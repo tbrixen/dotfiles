@@ -1,0 +1,15 @@
+# Used to scedule one-off runs of commands/scripts
+# Scheduled at today 7:20 pm
+at 7:20pm
+
+# Schedule in 5 minutes
+at now + 5 minutes
+
+# List current jobs
+atq
+
+# Remove job 4 from queue
+atrm 4
+
+# See commands of job
+
