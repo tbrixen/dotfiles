@@ -68,6 +68,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Press Ctrl + Space to accept and execute a suggestion from zsh-autosuggestions
 bindkey '^ ' autosuggest-execute
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zshrc_local_after ]; then
     source ~/.zshrc_local_after
