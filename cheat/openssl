@@ -1,0 +1,11 @@
+# Get SHA256 fingerprint
+openssl x509 -in CERT.pem -noout -sha256 -fingerprint
+
+# Get certificate info from server
+openssl s_client -showcerts -connect www.example.com:443 </dev/null
+
+# Extract certificate from server
+openssl s_client -connect www.google.com:443 2>/dev/null </dev/null |  sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
+
+# Verify a cert signes another cert
+openssl verify -CAfile RootCert.pem -untrusted Intermediate.pem UserCert.pem
