@@ -5,20 +5,26 @@ Ctrl-b d
 tmux attach
 
 # Pane control
-Ctrl-b "      Split vertically
-Ctrl-b %      Split horisontally
-Ctrl-b o      Next pane
-Ctrl-b :      Previous pane
-Ctrl-b z      Toggle pane zoom
-Ctrl-b x      Kill current pane
-Ctrl-b space  Toggle between pane layouts
-Ctrl-b Ctrl-O Swap panes
+Ctrl-b "        Split vertically
+Ctrl-b %        Split horisontally
+Ctrl-b o        Next pane
+Ctrl-b :        Previous pane
+Ctrl-b z        Toggle pane zoom
+Ctrl-b x        Kill current pane
+Ctrl-b space    Toggle between pane layouts
+Ctrl-b Ctrl-O   Swap panes
+
+# Window control
+Ctrl-b c        Create windows
+Ctrl-b ,        Rename window
+Ctrl-b &        Close current window
+Ctrn-b 0 ... 9  Switch/select window by number
 
 # Copy-mode
-Ctrl-b [      Enter copy mode
-Ctrl-b Space  Start selection
-Ctrl-b Enter  Copy selection
-Ctrl-b ]      Paste contenst of buffer_0
+Ctrl-b [        Enter copy mode
+Ctrl-b Space    Start selection
+Ctrl-b Enter    Copy selection
+Ctrl-b ]        Paste contenst of buffer_0
 
 # Help screen (Q to quit):
 Ctrl-b ?
