@@ -2,6 +2,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+
 " OPTIONS ---------------------- {{{
 set nocompatible
 set showcmd         " Display incomplete commands
@@ -234,6 +235,21 @@ let g:ale_linters = {
 " workaround needed when you use elzr/vim-json with indentLine
 " https://github.com/elzr/vim-json/issues/23
 let g:indentLine_noConcealCursor=""
+" }}}
+
+" vim-tmux-navigator ---------------------- {{{
+"let g:tmux_navigator_no_mappings = 1
+
+" See https://stackoverflow.com/questions/9520676/macvim-iterm2-tmux-bind-alt-meta
+execute "set <A-j>=\ej"
+execute "set <A-k>=\ek"
+execute "set <A-h>=\eh"
+execute "set <A-l>=\el"
+nnoremap <silent> <A-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <A-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <A-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <A-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
 " }}}
 
 " }}}
