@@ -115,7 +115,7 @@ endif
 nmap <F3> i<C-R>=strftime("%H:%M %p")<CR><Esc>
 imap <F3> <C-R>=strftime("%H:%M %p")<CR>
 
-command Listcommands grep map $MYVIMRC
+command! Listcommands grep map $MYVIMRC
 " }}}
 
 " FILE TYPE TRIGGERS ---------------------- {{{
@@ -214,7 +214,7 @@ let g:rooter_patterns = ['vimrooter', '.git/']
 " Vim-FuzzyFinder ---------------------- {{{
 nmap <leader>e :FufFile<cr>
 nmap <leader>E :FufFileWithCurrentBufferDir<cr>
-command Cd :FufDir
+command! Cd :FufDir
 let g:fuf_keyPreview = '<C-v>'
 let g:fuf_previewHeight = 10
 let g:fuf_autoPreview = 1
