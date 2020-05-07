@@ -103,3 +103,6 @@
 [submodule "vim/bundle/vim-ps1"]
 	path = vim/bundle/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule "tmux/plugins/tmux-copycat"]
+	path = tmux/plugins/tmux-copycat
+	url = https://github.com/tmux-plugins/tmux-copycat.git
