@@ -16,6 +16,8 @@ The vim plugin YouCompleteMe is included. For this to work it must be compiled. 
 
 Windows users see https://bitbucket.org/Alexander-Shukaev/vim-youcompleteme-for-windows.
 
+The Tmux theme uses PowerLine patched fonts. For WSL in Windows Terminal install CascadiaMonoPL (https://github.com/microsoft/cascadia-code/releases) and set `"fontFace": "Cascadia Mono PL"` in options of Windows Terminal.
+
 Making local customizations
 ---------------------------
 
