@@ -254,3 +254,5 @@ nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
 
 " }}}
 
+let g:tmuxline_powerline_separators = 0
+
