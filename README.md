@@ -32,14 +32,21 @@ Updating submodules
 Updating the local submodules to the versions specified in this repository
 
     $ git submodule update --remote --merge
-    
+
 Updating submodules to the current version on their respective remotes
 
     $ git submodule update --remote --merge
     $ git submodule foreach --recursive 'git reset --hard'
     $ git status
     $ # Then, for each submodule with 'new commits', do a 'git add <submodule path>'
-    
+
+Removing a submodule
+--------------------
+
+To remove a submodule, use the `rm` command
+
+    $ git rm /path/to/submodule
+
 Add a plugin to Vim
 ----------------------
 
