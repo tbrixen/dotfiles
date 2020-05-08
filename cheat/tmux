@@ -5,8 +5,8 @@ Ctrl-x d
 tmux attach
 
 # Pane control
-Ctrl-x "        Split vertically
-Ctrl-x %        Split horisontally
+Ctrl-x -        Split vertically # Was Ctrl-b "
+Ctrl-x |        Split horisontally #Was Ctrl-b %
 Ctrl-x o        Next pane
 Ctrl-x :        Previous pane
 Ctrl-x z        Toggle pane zoom
@@ -21,10 +21,19 @@ Ctrl-x &        Close current window
 Ctrn-x 0 ... 9  Switch/select window by number
 
 # Copy-mode
-Ctrl-x [        Enter copy mode
-Ctrl-x Space    Start selection
-Ctrl-x Enter    Copy selection
-Ctrl-x ]        Paste contenst of buffer_0
+Ctrl-x v        Enter copy mode # Was Ctrl-b [
+v               Start selection (in copy-mode) # Was Ctrl-b Space
+y               Copy selection (in copy-mode) # Was Ctrl-b Enter
+Ctrl-x P        Paste content of buffer_0 # Was Ctrl-b ]
+
+# Plugin: Tmux-fingers
+Ctrl-x F        Enter [fingers] mode
+# The following bindings are in [fingers] mode
+a-z             Copies selected match
+Shift + a-z     Pastes selected match
+Tab             Toggle multi mode
+Space           Toggle compact hints
+?               Show help
 
 # Help screen (Q to quit):
 Ctrl-x ?
