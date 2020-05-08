@@ -1,30 +1,30 @@
 # Detach from tmux:
-Ctrl-b d
+Ctrl-x d
 
 # Restore tmux session:
 tmux attach
 
 # Pane control
-Ctrl-b "        Split vertically
-Ctrl-b %        Split horisontally
-Ctrl-b o        Next pane
-Ctrl-b :        Previous pane
-Ctrl-b z        Toggle pane zoom
-Ctrl-b x        Kill current pane
-Ctrl-b space    Toggle between pane layouts
-Ctrl-b Ctrl-O   Swap panes
+Ctrl-x "        Split vertically
+Ctrl-x %        Split horisontally
+Ctrl-x o        Next pane
+Ctrl-x :        Previous pane
+Ctrl-x z        Toggle pane zoom
+Ctrl-x x        Kill current pane
+Ctrl-x space    Toggle between pane layouts
+Ctrl-x Ctrl-O   Swap panes
 
 # Window control
-Ctrl-b c        Create windows
-Ctrl-b ,        Rename window
-Ctrl-b &        Close current window
-Ctrn-b 0 ... 9  Switch/select window by number
+Ctrl-x c        Create windows
+Ctrl-x ,        Rename window
+Ctrl-x &        Close current window
+Ctrn-x 0 ... 9  Switch/select window by number
 
 # Copy-mode
-Ctrl-b [        Enter copy mode
-Ctrl-b Space    Start selection
-Ctrl-b Enter    Copy selection
-Ctrl-b ]        Paste contenst of buffer_0
+Ctrl-x [        Enter copy mode
+Ctrl-x Space    Start selection
+Ctrl-x Enter    Copy selection
+Ctrl-x ]        Paste contenst of buffer_0
 
 # Help screen (Q to quit):
-Ctrl-b ?
+Ctrl-x ?
