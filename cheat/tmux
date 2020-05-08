@@ -35,5 +35,13 @@ Tab             Toggle multi mode
 Space           Toggle compact hints
 ?               Show help
 
+# Plugin: Extrakto
+Ctrl-x tab      Go into [extracto] mode
+# The following bindings are in [extracto] mode
+Tab             Insert into current pane
+Enter           Copy to clipboard
+Ctrl-o          Open path/url
+Ctrl-e          Edit with `$EDITOR`
+
 # Help screen (Q to quit):
 Ctrl-x ?
