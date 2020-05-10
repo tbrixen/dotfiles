@@ -4,6 +4,7 @@ These are my dotfiles. There are many more like them but these are mine.
 
 They are a mix of Windows, macOS and Linux dotfiles. I’ve tried to make them work on these platforms.
 
+
 ## Installation
 
 For Linux/MacOS
@@ -43,6 +44,19 @@ This theme needs Powerline patched fonts.
 * `.bashrc` : `~/.bashrc_local_after` runs after
 * `.zshrc` : `~/.zshrc_local_after` runs after
 
+
+## Vim and Tmux integration
+
+The Vim plugin [vim-tmux-navigation](https://github.com/christoomey/vim-tmux-navigator) together with the Tmux plugin [vim-tmux-navigation](https://github.com/christoomey/vim-tmux-navigator) provides seamless split/pane navigation using the following key-bindings
+
+* `C-l`
+* `C-k`
+* `C-j`
+* `C-h`
+
+To check if it has been loaded, source the `vimrc`, run `:version` and check that it is in the list
+
+
 ## Updating submodules
 
 Updating the local submodules to the versions specified in this repository
@@ -69,15 +83,5 @@ Add it as a sub-module, and reload vim
     $ cd vim/bundle/
     $ git submodule add https://url-to-clone
 
-To check if it has been loaded, source the `vimrc`, run `:version` and check that it is in the list.
-
-## Vim and Tmux integration
-
-The Vim plugin [vim-tmux-navigation](https://github.com/christoomey/vim-tmux-navigator) together with the Tmux plugin [vim-tmux-navigation](https://github.com/christoomey/vim-tmux-navigator) provides seamless split/pane navigation using the following key-bindings
-
-* `C-l`
-* `C-k`
-* `C-j`
-* `C-h`
 
 [dotbot]: https://github.com/anishathalye/dotbot
