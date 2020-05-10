@@ -54,10 +54,10 @@ The Vim plugin [vim-tmux-navigation](https://github.com/christoomey/vim-tmux-nav
 * `C-j`
 * `C-h`
 
-To check if it has been loaded, source the `vimrc`, run `:version` and check that it is in the list
 
+## Notes for maintaining this repository
 
-## Updating submodules
+**Update submodules**
 
 Updating the local submodules to the versions specified in this repository
 
@@ -70,18 +70,20 @@ Updating submodules to the current version on their respective remotes
     $ git status
     $ # Then, for each submodule with 'new commits', do a 'git add <submodule path>'
 
-## Removing a submodule
+**Remove a submodule**
 
 To remove a submodule, use the `rm` command
 
     $ git rm /path/to/submodule
 
-# Add a plugin to Vim
+**Add a plugin to Vim**
 
 Add it as a sub-module, and reload vim
 
     $ cd vim/bundle/
     $ git submodule add https://url-to-clone
+
+To check if it has been loaded, source the `vimrc`, run `:version` and check that it is in the list
 
 
 [dotbot]: https://github.com/anishathalye/dotbot
