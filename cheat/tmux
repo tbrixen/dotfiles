@@ -13,6 +13,8 @@ Ctrl-x z        Toggle pane zoom
 Ctrl-x x        Kill current pane
 Ctrl-x space    Toggle between pane layouts
 Ctrl-x Ctrl-O   Swap panes
+:break-pan -t : Break current pane into a new window
+Ctrl-x !        Break current pane into a new window and swtich to it
 
 # Window control
 Ctrl-x c        Create windows
