@@ -118,3 +118,6 @@
 [submodule "vim/bundle/vim-tmux-focus-events"]
 	path = vim/bundle/vim-tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
+[submodule "vim/bundle/zoomwintab.vim"]
+	path = vim/bundle/zoomwintab.vim
+	url = https://github.com/troydm/zoomwintab.vim
