@@ -66,7 +66,8 @@ noremap <C-c> <Esc>
 inoremap jk <Esc>
 
 " Save buffer using leader
-nnoremap <leader>w <Esc>:w<CR>
+nnoremap <leader>w :w<CR>
+inoremap <leader>w <Esc>:w<CR>
 
 " Move between splits
 nnoremap <C-J> <C-W><C-J>
