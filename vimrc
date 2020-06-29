@@ -115,6 +115,8 @@ endif
 " Advanced use: strftime("%Y-%m-%d %a %H:%M %p")
 nmap <F3> i<C-R>=strftime("%H:%M %p")<CR><Esc>
 imap <F3> <C-R>=strftime("%H:%M %p")<CR>
+nmap <F12> <ESC>:w <bar> execute 'silent !\%USERPROFILE\%\Documents\Noter\journal\update.bat' <bar> e <bar> normal zo<CR>
+imap <F12> <ESC>:w <bar> execute 'silent !\%USERPROFILE\%\Documents\Noter\journal\update.bat' <bar> e <bar> normal zo<CR>
 
 command! Listcommands grep map $MYVIMRC
 " }}}
