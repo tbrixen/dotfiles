@@ -78,6 +78,8 @@ To remove a submodule, use the `rm` command
 
 **Add a plugin to Vim**
 
+To increase portability, use https instead of ssh 
+
 Add it as a sub-module, and reload vim
 
     $ cd vim/bundle/
