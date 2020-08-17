@@ -121,3 +121,6 @@
 [submodule "vim/bundle/zoomwintab.vim"]
 	path = vim/bundle/zoomwintab.vim
 	url = https://github.com/troydm/zoomwintab.vim
+[submodule "vim/bundle/viewmaps.vim"]
+	path = vim/bundle/viewmaps.vim
+	url = https://github.com/robcsi/viewmaps.vim

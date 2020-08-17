@@ -118,7 +118,9 @@ imap <F3> <C-R>=strftime("%H:%M %p")<CR>
 nmap <F12> <ESC>:w <bar> execute 'silent !\%USERPROFILE\%\Documents\Noter\journal\update.bat' <bar> e <bar> normal zo<CR>
 imap <F12> <ESC>:w <bar> execute 'silent !\%USERPROFILE\%\Documents\Noter\journal\update.bat' <bar> e <bar> normal zo<CR>
 
-command! Listcommands grep map $MYVIMRC
+nnoremap <silent> <leader>dn :ViewMaps n quickfix<CR> "display normal mode maps
+nnoremap <silent> <leader>di :ViewMaps i quickfix<CR> "display insert mode maps
+nnoremap <silent> <leader>dv :ViewMaps v quickfix<CR> "display visual mode maps
 " }}}
 
 " FILE TYPE TRIGGERS ---------------------- {{{
