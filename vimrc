@@ -128,6 +128,8 @@ augroup END
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
+autocmd BufNewFile,BufRead *.xml if search('<project name', 'nw') | set ft=ant | endif
+
 " }}}
 
 " PLUGINS SETTINGS ---------------------- {{{
