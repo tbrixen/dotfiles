@@ -124,3 +124,6 @@
 [submodule "vim/bundle/viewmaps.vim"]
 	path = vim/bundle/viewmaps.vim
 	url = https://github.com/robcsi/viewmaps.vim
+[submodule "vim/bundle/markdown-preview.nvim"]
+	path = vim/bundle/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim.git
