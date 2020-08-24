@@ -135,12 +135,11 @@ autocmd BufNewFile,BufRead *.xml if search('<project name', 'nw') | set ft=ant |
 " PLUGINS SETTINGS ---------------------- {{{
 
 " Markdown ---------------------- {{{
-autocmd BufRead,BufNewFile *.md set filetype=markdown 
 nnoremap <Leader>pp :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
 nnoremap <Leader>pv :RunSilent open /tmp/vim-pandoc-out.pdf<CR>
 
-" Disable folding of sections
-let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_folding_level=2
+let g:vim_markdown_autowrite = 1
 " Enable latex math highlight
 let g:vim_markdown_math=1
 " }}}
