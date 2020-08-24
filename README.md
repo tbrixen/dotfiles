@@ -85,7 +85,7 @@ Add it as a sub-module, and reload vim
     $ cd vim/bundle/
     $ git submodule add https://url-to-clone
 
-To check if it has been loaded, source the `vimrc`, run `:version` and check that it is in the list
+To check if it has been loaded, source the `vimrc`, run `:scriptnames` and check that it is in the list
 
 
 [dotbot]: https://github.com/anishathalye/dotbot
