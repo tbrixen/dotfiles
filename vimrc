@@ -219,13 +219,11 @@ nmap <leader>e :FufFile<cr>
 nmap <leader>E :FufFileWithCurrentBufferDir<cr>
 command! Cd :FufDir
 let g:fuf_keyPreview = '<C-v>'
-let g:fuf_previewHeight = 10
-let g:fuf_autoPreview = 1
 
 let g:fuf_keyOpen = '<CR>'
-let g:fuf_keyOpenSplit = '<C-S>'
-let g:fuf_keyOpenVsplit = '<C-V>'
-let g:fuf_keyOpenTabpage = '<C-T>'
+let g:fuf_keyOpenSplit = '<C-s>'
+let g:fuf_keyOpenVsplit = '<C-v>'
+let g:fuf_keyOpenTabpage = '<C-t>'
 " }}}
 
 " ale ---------------------- {{{
