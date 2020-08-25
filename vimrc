@@ -11,7 +11,7 @@ set number          " Show line number of cursor
 set cursorline      " Highlight screen line of cursor
 set hidden          " Don't prompt to save hidden windows
 set wildmenu        " Show possible completion on command line
-set wildmode=list:longest " List all options, and complete with the most common
+set wildmode=longest:list,full " 1. tab: ist all options 2. tab: complete to the longest common string
 set laststatus=2    " Always show status line
 set encoding=utf-8  " Make vim work in UTF-8
 set list            " Show whitespace as special chars - see listchars
