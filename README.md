@@ -36,6 +36,12 @@ This theme needs Powerline patched fonts.
 
 **Extrakto** (Tmux plugin): requires `fzf`.
 
+**markdown-preview.nvim** (Vim plugin): 
+Requires `npm` and `yarn`
+
+    $ npm install -g yarn
+    $ cd vim/bundle/markdown-preview.nvim
+    $ yarn install
 
 ## Making local customizations
 
