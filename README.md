@@ -19,13 +19,6 @@ For Windows I’ve included an experimental installation script `install.bat`.
 
 The dotfiles should work (more or less) out of the box, but to fully utilize all plugins we need to compile and/or install some dependencies.
 
-**YouCompleteMe** (Vim plugin):
-The vim plugin YouCompleteMe is included. For this to work it must be compiled. This requires `python` and `cmake`. Install the plugin using
-
-    $ vim/bundle/YouCompleteMe/install.py
-
-Windows users see https://bitbucket.org/Alexander-Shukaev/vim-youcompleteme-for-windows.
-
 **One-dark** (Tmux theme):
 This theme needs Powerline patched fonts.
 
