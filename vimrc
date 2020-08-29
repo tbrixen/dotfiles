@@ -128,6 +128,7 @@ augroup END
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
+" If filetype contains <project name, it should be considered as an Ant script
 autocmd BufNewFile,BufRead *.xml if search('<project name', 'nw') | set ft=ant | endif
 
 " }}}
