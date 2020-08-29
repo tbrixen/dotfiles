@@ -43,6 +43,13 @@ Requires `npm` and `yarn`
 * `.bashrc` : `~/.bashrc_local_after` runs after
 * `.zshrc` : `~/.zshrc_local_after` runs after
 
+## Vim
+
+### Linter
+
+VIM uses ALE for linting. Currently is integrates with the following linters which should be on the PATH:
+
+* shellcheck (for Bash scripts)
 
 ## Vim and Tmux integration
 
