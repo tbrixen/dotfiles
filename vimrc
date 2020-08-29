@@ -230,6 +230,7 @@ let g:fuf_keyOpenTabpage = '<C-t>'
 " ale ---------------------- {{{
 let g:ale_linters = {
 \   'sh': ['shellcheck'],
+\   'Dockerfile': ['hadolint'],
 \}
 " }}}
 

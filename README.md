@@ -50,6 +50,7 @@ Requires `npm` and `yarn`
 VIM uses ALE for linting. Currently is integrates with the following linters which should be on the PATH:
 
 * shellcheck (for Bash scripts)
+* hadolint (for Dockerfiles)
 
 ## Vim and Tmux integration
 
