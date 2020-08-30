@@ -139,3 +139,6 @@
 [submodule "vim/bundle/Dockerfile.vim"]
 	path = vim/bundle/Dockerfile.vim
 	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "vim/bundle/groovyindent-unix"]
+	path = vim/bundle/groovyindent-unix
+	url = https://github.com/vim-scripts/groovyindent-unix.git
