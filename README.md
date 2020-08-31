@@ -45,6 +45,17 @@ Requires `npm` and `yarn`
 
 ## Vim
 
+### Python 3
+
+#### Windows
+
+For Windows, I cound that I needed Python 3.6 by issuesing `:py3 print("hello")`
+and noticed it did not find `python36.dll` .
+
+I downloaded it the x86 version from https://www.python.org/downloads/release/python-368/, installed on on PATH.
+
+See https://stackoverflow.com/questions/23691408/install-gvim-on-windows-with-python3-support
+
 ### Linter
 
 VIM uses ALE for linting. Currently is integrates with the following linters which should be on the PATH:
