@@ -49,12 +49,19 @@ Requires `npm` and `yarn`
 
 #### Windows
 
-For Windows, I cound that I needed Python 3.6 by issuesing `:py3 print("hello")`
-and noticed it did not find `python36.dll` .
+Vim and the Python version is linked together. But issuing `:py3 print("hello")` it complained about it could not find `python36.dll`.
 
-I downloaded it the x86 version from https://www.python.org/downloads/release/python-368/, installed on on PATH.
+I fetched the x86 version from https://www.python.org/downloads/release/python-368/, and installed on PATH.
 
-See https://stackoverflow.com/questions/23691408/install-gvim-on-windows-with-python3-support
+See https://stackoverflow.com/questions/23691408/install-gvim-on-windows-with-python3-support for more information.
+
+#### MacOS
+
+I expected it to be at troublesome as above, but a simple
+
+    brew install pyton3 
+
+made `:py3 print("hello")` work fine
 
 ### Linter
 
