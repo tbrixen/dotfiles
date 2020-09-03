@@ -1,3 +1,9 @@
+let g:pathogen_blacklist=[]
+
+if !has('python3')
+  let g:pathogen_blacklist += [ 'ultisnips' ]
+endif
+
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
