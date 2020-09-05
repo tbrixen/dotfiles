@@ -1,18 +1,48 @@
-let g:pathogen_blacklist=[]
-
-if !has('python3')
-  let g:pathogen_blacklist += [ 'ultisnips' ]
-endif
-
-"if empty(glob('~/.vim/autoload/plug.vim'))
-"  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-"    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-"endif
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-repeat'
+Plug 'bling/vim-airline'
+Plug 'ervandew/supertab'
+Plug 'w0rp/ale'
+Plug 'Yggdroot/indentLine'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'python-mode/python-mode'
+Plug 'jjaderberg/vim-ft-asciidoc'
+Plug 'junegunn/vim-easy-align'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-pathogen/'
+Plug 'tpope/vim-surround'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'tpope/vim-unimpaired'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+Plug 'majutsushi/tagbar'
+Plug 'mileszs/ack.vim'
+Plug 'aklt/plantuml-syntax'
+Plug 'tpope/vim-vinegar'
+Plug 'connorholyday/vim-snazzy'
+Plug 'bronson/vim-visual-star-search'
+Plug 'vim-scripts/FuzzyFinder'
+Plug 'vim-scripts/L9'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'roxma/vim-tmux-clipboard'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'troydm/zoomwintab.vim'
+Plug 'robcsi/viewmaps.vim'
+Plug 'iamcco/markdown-preview.nvim'
+Plug 'plasticboy/vim-markdown'
+Plug 'tpope/vim-fugitive'
+Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'vim-scripts/groovyindent-unix'
+if !has('python3')
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+endif
 
 call plug#end()
 
