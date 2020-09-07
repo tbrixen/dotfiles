@@ -160,6 +160,12 @@ let g:vim_markdown_autowrite = 1
 let g:vim_markdown_math=1
 " }}}
 
+" Markdown-preview.nvim ---------------------- {{{
+
+" Don't close browser windows when changing buffer
+let g:mkdp_auto_close = 0
+" }}}
+
 " Vim-airline---------------------- {{{
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
