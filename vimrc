@@ -98,6 +98,13 @@ set path-=/usr/include
 set wildcharm=<C-z>
 nnoremap ,e :e **/*<C-z><S-Tab>
 nnoremap ,f :find **/*<C-z><S-Tab>
+
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
 " }}}
 
 " COLORS ---------------------- {{{
