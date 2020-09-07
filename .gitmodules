@@ -1,66 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "vim/bundle/vim-sensible"]
-	path = vim/bundle/vim-sensible
-	url = https://github.com/tpope/vim-sensible
-[submodule "vim/bundle/vim-repeat"]
-	path = vim/bundle/vim-repeat
-	url = https://github.com/tpope/vim-repeat
-[submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
-[submodule "vim/bundle/supertab"]
-	path = vim/bundle/supertab
-	url = https://github.com/ervandew/supertab
-[submodule "vim/bundle/ale"]
-	path = vim/bundle/ale
-	url = https://github.com/w0rp/ale
-[submodule "vim/bundle/indentLine"]
-	path = vim/bundle/indentLine
-	url = https://github.com/Yggdroot/indentLine
-[submodule "vim/bundle/ctrlp.vim"]
-	path = vim/bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim
-[submodule "vim/bundle/python-mode"]
-	path = vim/bundle/python-mode
-	url = https://github.com/python-mode/python-mode
-[submodule "vim/bundle/vim-ft-asciidoc"]
-	path = vim/bundle/vim-ft-asciidoc
-	url = https://github.com/jjaderberg/vim-ft-asciidoc
-[submodule "vim/bundle/vim-easy-align"]
-	path = vim/bundle/vim-easy-align
-	url = https://github.com/junegunn/vim-easy-align
-[submodule "vim/bundle/vim-gitgutter"]
-	path = vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
-[submodule "vim/bundle/vim-pathogen"]
-	path = vim/bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen/
-[submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround
-[submodule "vim/bundle/awesome-vim-colorschemes"]
-	path = vim/bundle/awesome-vim-colorschemes
-	url = https://github.com/rafi/awesome-vim-colorschemes
-[submodule "vim/bundle/vim-unimpaired"]
-	path = vim/bundle/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired
-[submodule "vim/bundle/fzf"]
-	path = vim/bundle/fzf
-	url = https://github.com/junegunn/fzf
-[submodule "vim/bundle/fzf.vim"]
-	path = vim/bundle/fzf.vim
-	url = https://github.com/junegunn/fzf.vim
-[submodule "vim/bundle/vim-rooter"]
-	path = vim/bundle/vim-rooter
-	url = https://github.com/airblade/vim-rooter
-[submodule "vim/bundle/tagbar"]
-	path = vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar
-[submodule "vim/bundle/ack.vim"]
-	path = vim/bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim
 [submodule "zsh-extras/oh-my-zsh"]
 	path = zsh-extras/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh
@@ -73,33 +13,12 @@
 [submodule "zsh-extras/zcustom/plugins/you-should-use"]
 	path = zsh-extras/zcustom/plugins/you-should-use
 	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
-[submodule "vim/bundle/plantuml-syntax"]
-	path = vim/bundle/plantuml-syntax
-	url = https://github.com/aklt/plantuml-syntax.git
-[submodule "vim/bundle/vim-vinegar"]
-	path = vim/bundle/vim-vinegar
-	url = https://github.com/tpope/vim-vinegar.git
-[submodule "vim/bundle/vim-snazzy"]
-	path = vim/bundle/vim-snazzy
-	url = https://github.com/connorholyday/vim-snazzy.git
-[submodule "vim/bundle/vim-visual-star-search"]
-	path = vim/bundle/vim-visual-star-search
-	url = https://github.com/bronson/vim-visual-star-search.git
-[submodule "vim/bundle/L9"]
-	path = vim/bundle/L9
-	url = https://github.com/vim-scripts/L9.git
-[submodule "vim/bundle/vim-tmux-navigator"]
-	path = vim/bundle/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
 [submodule "tmux/plugins/tmux-yank"]
 	path = tmux/plugins/tmux-yank
 	url = https://github.com/tmux-plugins/tmux-yank.git
-[submodule "vim/bundle/vim-ps1"]
-	path = vim/bundle/vim-ps1
-	url = https://github.com/PProvost/vim-ps1.git
 [submodule "tmux/plugins/tmux-onedark-theme"]
 	path = tmux/plugins/tmux-onedark-theme
 	url = https://github.com/odedlaz/tmux-onedark-theme
@@ -109,39 +28,3 @@
 [submodule "tmux/plugins/tmux-fingers"]
 	path = tmux/plugins/tmux-fingers
 	url = https://github.com/Morantron/tmux-fingers
-[submodule "vim/bundle/vim-tmux-clipboard"]
-	path = vim/bundle/vim-tmux-clipboard
-	url = https://github.com/roxma/vim-tmux-clipboard.git
-[submodule "vim/bundle/vim-tmux-focus-events"]
-	path = vim/bundle/vim-tmux-focus-events
-	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
-[submodule "vim/bundle/zoomwintab.vim"]
-	path = vim/bundle/zoomwintab.vim
-	url = https://github.com/troydm/zoomwintab.vim
-[submodule "vim/bundle/viewmaps.vim"]
-	path = vim/bundle/viewmaps.vim
-	url = https://github.com/robcsi/viewmaps.vim
-[submodule "vim/bundle/markdown-preview.nvim"]
-	path = vim/bundle/markdown-preview.nvim
-	url = https://github.com/iamcco/markdown-preview.nvim.git
-[submodule "vim/bundle/vim-markdown"]
-	path = vim/bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
-[submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/bundle/Jenkinsfile-vim-syntax"]
-	path = vim/bundle/Jenkinsfile-vim-syntax
-	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
-[submodule "vim/bundle/Dockerfile.vim"]
-	path = vim/bundle/Dockerfile.vim
-	url = https://github.com/ekalinin/Dockerfile.vim.git
-[submodule "vim/bundle/groovyindent-unix"]
-	path = vim/bundle/groovyindent-unix
-	url = https://github.com/vim-scripts/groovyindent-unix.git
-[submodule "vim/bundle/vim-snippets"]
-	path = vim/bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
-[submodule "vim/bundle/ultisnips"]
-	path = vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git

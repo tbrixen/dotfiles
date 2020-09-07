@@ -4,13 +4,20 @@
 @echo [+] Creating symlink to %~dp0vimrc from %HOMEPATH%\_vimrc
 @mklink %HOMEPATH%\_vimrc %~dp0vimrc
 
-@echo [+] Creating symlink to %~dp0vimfile\ from %HOMEPATH%\.vim\
+@echo [+] Creating symlink to %~dp0vim\ from %HOMEPATH%\vimfiles\
 @mklink /D %HOMEPATH%\vimfiles %~dp0vim
+
+@echo [+] Creating symlink to %~dp0vim\ from %HOMEPATH%\.vim\
+@mklink /D %HOMEPATH%\.vim %~dp0vim
 
 @echo [+] Creating symlink to %~dp0gitconfig from %HOMEPATH%\.gitconfig
 @mklink %HOMEPATH%\.gitconfig %~dp0gitconfig
 
-@echo [+] Please run the following to download dotbot and vim plugins
-@echo   git submodule update --init --recursive
+@echo [+] Initializing dotbot and other git submodules
+@cd %~dp0
+git submodule update --init --recursive
+
+@echo [+] To install plugins for Vim, open Vim and run the following
+@echo   :PlugInstall
 
 pause

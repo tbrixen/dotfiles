@@ -2,6 +2,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa", Installing vim plugins]
 
 - link:
     ~/.oh-my-zsh:     zsh-extras/oh-my-zsh
