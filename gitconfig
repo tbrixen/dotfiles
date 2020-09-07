@@ -13,6 +13,7 @@
   ss = status -s
 
   la = config --get-regexp alias
+  prunemergedbranches = !sh -c 'git branch --merged $1 | grep -v "^* $1" | xargs git branch -d'
 
 [core]
   excludesfile = ~/.cvsignore
