@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'Yggdroot/indentLine'
@@ -35,7 +34,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'troydm/zoomwintab.vim'
 Plug 'vim-scripts/groovyindent-unix'
 Plug 'w0rp/ale'
-if !has('python3')
+if has('python3')
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 endif
