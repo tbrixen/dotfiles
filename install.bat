@@ -7,6 +7,9 @@
 @echo [+] Creating symlink to %~dp0vimfile\ from %HOMEPATH%\.vim\
 @mklink /D %HOMEPATH%\vimfiles %~dp0vim
 
+@echo [+] Creating symlink to %~dp0vim\ from %HOMEPATH%\.vim\
+@mklink /D %HOMEPATH%\.vim %~dp0vim
+
 @echo [+] Creating symlink to %~dp0gitconfig from %HOMEPATH%\.gitconfig
 @mklink %HOMEPATH%\.gitconfig %~dp0gitconfig
 
