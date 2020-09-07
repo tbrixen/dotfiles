@@ -236,18 +236,6 @@ let g:ackprg = 'rg --vimgrep --no-heading'
 let g:rooter_patterns = ['vimrooter', '.git/']
 " }}}
 
-" Vim-FuzzyFinder ---------------------- {{{
-nmap <leader>e :FufFile<cr>
-nmap <leader>E :FufFileWithCurrentBufferDir<cr>
-command! Cd :FufDir
-let g:fuf_keyPreview = '<C-v>'
-
-let g:fuf_keyOpen = '<CR>'
-let g:fuf_keyOpenSplit = '<C-s>'
-let g:fuf_keyOpenVsplit = '<C-v>'
-let g:fuf_keyOpenTabpage = '<C-t>'
-" }}}
-
 " ale ---------------------- {{{
 let g:ale_linters = {
 \   'sh': ['shellcheck'],

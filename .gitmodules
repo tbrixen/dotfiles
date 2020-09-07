@@ -85,9 +85,6 @@
 [submodule "vim/bundle/vim-visual-star-search"]
 	path = vim/bundle/vim-visual-star-search
 	url = https://github.com/bronson/vim-visual-star-search.git
-[submodule "vim/bundle/FuzzyFinder"]
-	path = vim/bundle/FuzzyFinder
-	url = https://github.com/vim-scripts/FuzzyFinder
 [submodule "vim/bundle/L9"]
 	path = vim/bundle/L9
 	url = https://github.com/vim-scripts/L9.git
