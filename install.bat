@@ -13,7 +13,11 @@
 @echo [+] Creating symlink to %~dp0gitconfig from %HOMEPATH%\.gitconfig
 @mklink %HOMEPATH%\.gitconfig %~dp0gitconfig
 
-@echo [+] Please run the following to download dotbot
-@echo   git submodule update --init --recursive
+@echo [+] Initializing dotbot and other git submodules
+@cd %~dp0
+git submodule update --init --recursive
+
+@echo [+] To install plugins for Vim, open Vim and run the following
+@echo   :PlugInstall
 
 pause
