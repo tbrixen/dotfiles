@@ -9,7 +9,7 @@ Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'python-mode/python-mode'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'jjaderberg/vim-ft-asciidoc'
 Plug 'junegunn/vim-easy-align'
 Plug 'airblade/vim-gitgutter'
