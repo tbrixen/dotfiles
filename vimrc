@@ -1,3 +1,5 @@
+" PLUGINS ---------------------- {{{
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'Yggdroot/indentLine'
@@ -41,6 +43,7 @@ endif
 
 call plug#end()
 
+" }}}
 
 " OPTIONS ---------------------- {{{
 set nocompatible
