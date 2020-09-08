@@ -13,7 +13,6 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'jjaderberg/vim-ft-asciidoc'
 Plug 'junegunn/vim-easy-align'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-pathogen/'
 Plug 'tpope/vim-surround'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tpope/vim-unimpaired'
