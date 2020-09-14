@@ -13,6 +13,9 @@
 @echo [+] Creating symlink to %~dp0gitconfig from %HOMEPATH%\.gitconfig
 @mklink %HOMEPATH%\.gitconfig %~dp0gitconfig
 
+@echo [+] Creating symlink to %~dp0 from %HOMEPATH%\.dotfiles
+@mklink /D %HOMEPATH%\.dotfiles %~dp0
+
 @echo [+] Initializing dotbot and other git submodules
 @cd %~dp0
 git submodule update --init --recursive

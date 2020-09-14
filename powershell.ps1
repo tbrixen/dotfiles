@@ -3,6 +3,8 @@ Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
 function GoAdmin { start-process powershell -verb runAs }
 
+Import-Module ~/.dotfiles/posh-extras/cd-extras/cd-extras/cd-extras.psd1
+
 function Read-Manifest {
   param([string]$jarfile)
   
