@@ -235,10 +235,10 @@ nmap ga <Plug>(EasyAlign)
 " }}}
 
 " git-gutter ---------------------- {{{
-nmap <leader>ghn <Plug>GitGutterNextHunk
-nmap <leader>ghp <Plug>GitGutterPrevHunk
-nmap <Leader>ghv <Plug>GitGutterPreviewHunk
-nmap <Leader>ghu <Plug>GitGutterUndoHunk
+nmap <leader>ghn <Plug>(GitGutterNextHunk)
+nmap <leader>ghp <Plug>(GitGutterPrevHunk)
+nmap <Leader>ghv <Plug>(GitGutterPreviewHunk)
+nmap <Leader>ghu <Plug>(GitGutterUndoHunk)
 set updatetime=100
 " }}}
 
