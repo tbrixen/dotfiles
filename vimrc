@@ -40,6 +40,7 @@ if has('python3')
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 endif
+Plug 'haya14busa/incsearch.vim'
 
 call plug#end()
 
@@ -62,7 +63,6 @@ set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:· " Unicode chara
 " Search
 set ignorecase      " Case insensitive
 set smartcase       " Override ignorecase, if searching for uppercase
-set hlsearch        " Highlight searches
 set incsearch       " While typing, show matches
 set showmatch       " Briefly jump to matching bracket during insert
 
@@ -95,9 +95,6 @@ filetype plugin indent on " Automatically detect file types
 " KEY MAPS ---------------------- {{{
 " Make space the leader
 map <SPACE> <leader>
-
-" Clear the search highlight
-nnoremap <CR> :noh<CR><CR>"
 
 " Jump between bracket pairs by tab
 nnoremap <tab> %
@@ -307,6 +304,20 @@ nnoremap <silent> <leader>di :ViewMaps i quickfix<CR> "display insert mode maps
 nnoremap <silent> <leader>dv :ViewMaps v quickfix<CR> "display visual mode maps
 " }}}
 
+" incsearch ---------------------- {{{
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+" :h g:incsearch#auto_nohlsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+" }}}
 
 " }}}
 
