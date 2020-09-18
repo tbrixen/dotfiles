@@ -319,5 +319,13 @@ map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 " }}}
 
+" UltiSnips ---------------------- {{{
+" Even though :verbose imap <tab> showed UltiSnips\map_keys.vim it still didn't trigger
+" Found the following solution in https://github.com/SirVer/ultisnips/issues/512
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" }}}
+
 " }}}
 
