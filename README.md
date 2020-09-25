@@ -42,6 +42,7 @@ Requires `npm` and `yarn`
 * `.bashrc` : `~/.bashrc_local_before` runs first
 * `.bashrc` : `~/.bashrc_local_after` runs after
 * `.zshrc` : `~/.zshrc_local_after` runs after
+* `.vimrc` : `~/.vimrc_local_before` runs before
 
 ## Vim
 
@@ -70,7 +71,7 @@ VIM uses ALE for linting. Currently is integrates with the following linters whi
 * shellcheck (for Bash scripts)
 * hadolint (for Dockerfiles)
 
-### Intellisence
+### Intellisense
 
 VIM uses coc.nvim for intellisense. This needs NodeJS on the PATH.
 
