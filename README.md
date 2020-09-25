@@ -70,6 +70,10 @@ VIM uses ALE for linting. Currently is integrates with the following linters whi
 * shellcheck (for Bash scripts)
 * hadolint (for Dockerfiles)
 
+### Intellisence
+
+VIM uses coc.nvim for intellisense. This needs NodeJS on the PATH.
+
 ## Vim and Tmux integration
 
 The Vim plugin [vim-tmux-navigation](https://github.com/christoomey/vim-tmux-navigator) together with the Tmux plugin [vim-tmux-navigation](https://github.com/christoomey/vim-tmux-navigator) provides seamless split/pane navigation using the following key-bindings
