@@ -29,7 +29,6 @@ Plug 'mileszs/ack.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'robcsi/viewmaps.vim'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-fugitive'
@@ -46,6 +45,7 @@ if has('python3')
 endif
 Plug 'haya14busa/incsearch.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
 
@@ -302,10 +302,11 @@ nnoremap <silent> <A-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
 " }}}
 
-" ViewMap ---------------------- {{{
-nnoremap <silent> <leader>dn :ViewMaps n quickfix<CR> "display normal mode maps
-nnoremap <silent> <leader>di :ViewMaps i quickfix<CR> "display insert mode maps
-nnoremap <silent> <leader>dv :ViewMaps v quickfix<CR> "display visual mode maps
+" vim-which-key ---------------------- {{{
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ','
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 " }}}
 
 " incsearch ---------------------- {{{
