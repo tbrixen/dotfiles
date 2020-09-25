@@ -1,4 +1,8 @@
-source ~/.vimrc_local_before
+" SOURCE VIMRC_LOCAL_BEFORE ---------------------- {{{
+if filereadable(expand("~/.vimrc_local_before"))
+  source ~/.vimrc_local_before
+endif
+" }}}
 
 " PLUGINS ---------------------- {{{
 
