@@ -40,9 +40,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'troydm/zoomwintab.vim'
 Plug 'vim-scripts/groovyindent-unix'
 Plug 'w0rp/ale'
-if has('python3')
-  Plug 'honza/vim-snippets'
-endif
+Plug 'honza/vim-snippets'
 Plug 'haya14busa/incsearch.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vim-which-key'
