@@ -100,6 +100,9 @@ filetype plugin indent on " Automatically detect file types
 " KEY MAPS ---------------------- {{{
 " Make space the leader
 map <SPACE> <leader>
+" For vim-which-key plugin:
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ','
 
 " Jump between bracket pairs by tab
 nnoremap <tab> %
@@ -188,6 +191,11 @@ autocmd syntax ant setlocal foldmethod=indent | setlocal foldlevel=1
 " }}}
 
 " PLUGINS SETTINGS ---------------------- {{{
+
+" vim-which-key ---------------------- {{{
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
+" }}}
 
 " Markdown ---------------------- {{{
 nnoremap <Leader>pp :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
@@ -300,13 +308,6 @@ nnoremap <silent> <A-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <A-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <A-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <A-\> :TmuxNavigatePrevious<cr>
-" }}}
-
-" vim-which-key ---------------------- {{{
-let g:mapleader = "\<Space>"
-let g:maplocalleader = ','
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 " }}}
 
 " incsearch ---------------------- {{{
