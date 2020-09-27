@@ -24,10 +24,10 @@ all plugins we need to compile and/or install some dependencies.
 **One-dark** (Tmux theme):
 This theme needs Powerline patched fonts.
 
-* For WSL in Windows Terminal install CascadiaMonoPL 
- [cascadia-code](https://github.com/microsoft/cascadia-code/releases) and set 
+* For WSL in Windows Terminal install CascadiaMonoPL
+ [cascadia-code](https://github.com/microsoft/cascadia-code/releases) and set
  `"fontFace": "Cascadia Mono PL"` in options of Windows Terminal.
-* For Mac users with Iterm2: User a PowerLine patched font. E.g. from 
+* For Mac users with Iterm2: User a PowerLine patched font. E.g. from
   [powerline/fonts](https://github.com/powerline/fonts). I currently use Inconsolata-dz.
 
 **Tmux fingers** (Tmux plugin): requires `gawk`.
@@ -123,10 +123,10 @@ To increase portability, use https instead of ssh
 
 Add it as a sub-module, and reload vim
 
-    $ cd vim/bundle/
-    $ git submodule add https://url-to-clone
+    cd vim/bundle/
+    git submodule add https://url-to-clone
 
-To check if it has been loaded, source the `vimrc`, run `:scriptnames` and check that it is in the list
-
+To check if it has been loaded, source the `vimrc`, run `:scriptnames` and
+check that it is in the list
 
 [dotbot]: https://github.com/anishathalye/dotbot
