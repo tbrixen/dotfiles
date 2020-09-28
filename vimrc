@@ -112,7 +112,6 @@ inoremap jk <Esc>
 
 " Save buffer using leader
 nnoremap <leader>w :w<CR>
-inoremap <leader>w <Esc>:w<CR>
 
 " Move between splits
 nnoremap <C-J> <C-W><C-J>
@@ -194,6 +193,7 @@ autocmd syntax ant setlocal foldmethod=indent | setlocal foldlevel=1
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 " }}}
+"
 
 " Markdown ---------------------- {{{
 nnoremap <Leader>pp :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
