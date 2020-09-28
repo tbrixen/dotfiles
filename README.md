@@ -117,16 +117,4 @@ To remove a submodule, use the `rm` command
 
     git rm /path/to/submodule
 
-### Add a plugin to Vim
-
-To increase portability, use https instead of ssh
-
-Add it as a sub-module, and reload vim
-
-    cd vim/bundle/
-    git submodule add https://url-to-clone
-
-To check if it has been loaded, source the `vimrc`, run `:scriptnames` and
-check that it is in the list
-
 [dotbot]: https://github.com/anishathalye/dotbot
