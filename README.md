@@ -18,8 +18,8 @@ to be idempotent.
 
 For Windows I’ve included an experimental installation script `install.bat`.
 
-The dotfiles should work (more or less) out of the box, but to fully utilize
-all plugins we need to compile and/or install some dependencies.
+The dotfiles should work (more or less) out of the box, but to use all plugins
+we need to compile and/or install some dependencies.
 
 **One-dark** (Tmux theme):
 This theme needs Powerline patched fonts.
@@ -28,7 +28,7 @@ This theme needs Powerline patched fonts.
  [cascadia-code](https://github.com/microsoft/cascadia-code/releases) and set
  `"fontFace": "Cascadia Mono PL"` in options of Windows Terminal.
 * For Mac users with Iterm2: User a PowerLine patched font. E.g. from
-  [powerline/fonts](https://github.com/powerline/fonts). I currently use Inconsolata-dz.
+  [powerline/fonts](https://github.com/powerline/fonts). I use Inconsolata-dz.
 
 **Tmux fingers** (Tmux plugin): requires `gawk`.
 
@@ -55,8 +55,8 @@ Requires `npm` and `yarn`
 
 #### Windows
 
-Vim and the Python version is linked together. But issuing `:py3
-print("hello")` it complained about it could not find `python36.dll`.
+The compile for Vim links the Python version and the Vim version. But issuing
+`:py3 print("hello")` it complained about it could not find `python36.dll`.
 
 I fetched the x86 version from
 [python-368](https://www.python.org/downloads/release/python-368/), and
