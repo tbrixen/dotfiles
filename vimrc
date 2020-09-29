@@ -6,6 +6,8 @@ endif
 
 " PLUGINS ---------------------- {{{
 
+" Must be set before plugins are loaded 
+let g:ale_disable_lsp = 1
 call plug#begin('~/.vim/plugged')
 
 Plug 'Yggdroot/indentLine'
@@ -287,6 +289,10 @@ let g:ale_linters = {
 \   'sh': ['shellcheck'],
 \   'Dockerfile': ['hadolint'],
 \}
+
+nnoremap <space>al :lnext<CR>
+nnoremap <space>ap :lprevious<CR>
+nnoremap <space>ar :lrewind<CR>
 " }}}
 
 " vim-json ---------------------- {{{
