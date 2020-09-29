@@ -293,6 +293,9 @@ let g:ale_linters = {
 nnoremap <space>al :lnext<CR>
 nnoremap <space>ap :lprevious<CR>
 nnoremap <space>ar :lrewind<CR>
+
+let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '⚠'
 " }}}
 
 " vim-json ---------------------- {{{
