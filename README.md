@@ -1,6 +1,6 @@
 # Dotfiles
 
-These are my dotfiles. There are many more like them but these are mine. 
+These are my dotfiles. There are many more like them but these are mine.
 
 They are a mix of Windows, macOS and Linux dotfiles. I’ve tried to make them
 work on these platforms.
