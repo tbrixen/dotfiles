@@ -290,9 +290,9 @@ let g:ale_linters = {
 \   'Dockerfile': ['hadolint'],
 \}
 
-nnoremap <space>al :lnext<CR>
-nnoremap <space>ap :lprevious<CR>
-nnoremap <space>ar :lrewind<CR>
+nnoremap <leader>an :lnext<CR>
+nnoremap <leader>ap :lprevious<CR>
+nnoremap <leader>ar :lrewind<CR>
 
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
