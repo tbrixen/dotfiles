@@ -293,6 +293,8 @@ let g:ale_linters = {
 nnoremap <leader>an :lnext<CR>
 nnoremap <leader>ap :lprevious<CR>
 nnoremap <leader>ar :lrewind<CR>
+nnoremap zp :lbefore<CR>
+nnoremap zn :lafter<CR>
 
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
