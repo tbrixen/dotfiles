@@ -21,6 +21,7 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'iamcco/markdown-preview.nvim'
+Plug 'lervag/vimtex'
 Plug 'jjaderberg/vim-ft-asciidoc'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -195,7 +196,6 @@ autocmd syntax ant setlocal foldmethod=indent | setlocal foldlevel=1
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 " }}}
-"
 
 " Markdown ---------------------- {{{
 nnoremap <Leader>pp :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
@@ -339,7 +339,7 @@ map g# <Plug>(incsearch-nohl-g#)
 " }}}
 "
 " coc-nvim ---------------------- {{{
-let g:coc_global_extensions = ['coc-sh', 'coc-snippets', 'coc-vimlsp', 'coc-json', 'coc-markdownlint']
+let g:coc_global_extensions = ['coc-sh', 'coc-snippets', 'coc-vimlsp', 'coc-json', 'coc-markdownlint', 'coc-vimtex']
 " TextEdit might fail if hidden is not set.
 set hidden
 
@@ -494,5 +494,14 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " }}}
 
+" VimTex ---------------------- {{{
+" settings for sumatraPDF
+let g:vimtex_view_general_viewer = 'SumatraPDF'
+let g:vimtex_view_general_options
+    \ = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+let g:tex_flavor = 'latex'
 " }}}
+
+" 
 
