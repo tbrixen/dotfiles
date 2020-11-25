@@ -296,6 +296,8 @@ nnoremap <leader>ar :lrewind<CR>
 nnoremap zp :lbefore<CR>
 nnoremap zn :lafter<CR>
 
+let g:ale_dockerfile_hadolint_use_docker = 'always'
+
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
 " }}}
