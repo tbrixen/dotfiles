@@ -202,7 +202,6 @@ nnoremap <Leader>pp :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
 nnoremap <Leader>pv :RunSilent open /tmp/vim-pandoc-out.pdf<CR>
 
 let g:vim_markdown_folding_level=2
-let g:vim_markdown_autowrite = 1
 " Enable latex math highlight
 let g:vim_markdown_math=1
 " Disable conceal as is isn't disabled in insert mode
@@ -288,6 +287,10 @@ let g:rooter_patterns = ['vimrooter', '.git/']
 let g:ale_linters = {
 \   'sh': ['shellcheck'],
 \   'Dockerfile': ['hadolint'],
+\}
+
+let g:ale_fixers = {
+\   'markdown': ['trim_whitespace'],
 \}
 
 nnoremap <leader>an :lnext<CR>
