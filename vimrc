@@ -290,7 +290,7 @@ let g:ale_linters = {
 \}
 
 let g:ale_fixers = {
-\   'markdown': ['trim_whitespace'],
+\   '*': ['trim_whitespace'],
 \}
 
 nnoremap <leader>an :lnext<CR>
