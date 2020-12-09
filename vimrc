@@ -47,6 +47,7 @@ Plug 'honza/vim-snippets'
 Plug 'haya14busa/incsearch.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vim-which-key'
+Plug 'qpkorr/vim-bufkill'
 
 call plug#end()
 
@@ -127,10 +128,6 @@ nnoremap ' `
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cnoremap w!! w !sudo tee > /dev/null %
-
-" Remove current buffer from buffer list without closing window
-cnoremap bq  :bp <BAR> bd #<cr>
-cnoremap bq! :bp <BAR> bd! #<cr>
 
 " As default, don't :find in /usr/include
 set path-=/usr/include
