@@ -3,6 +3,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa", Installing vim plugins]
+  - [echo if PsSh fails run export PsHome=$(pwsh -c 'echo $PsHome') then sudo -E ./install]
 
 - link:
     ~/.oh-my-zsh:     zsh-extras/oh-my-zsh
@@ -26,5 +27,6 @@
     ~/.vim:
     ~/.cvsignore:
     ~/.zshrc:
+    $PsHome/Microsoft.PowerShell_profile.ps1:
 
 
