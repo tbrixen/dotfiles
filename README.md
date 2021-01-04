@@ -16,7 +16,7 @@ For Linux/MacOS
 The install script is a [Dotbot][dotbot] script and I’ve tried to configure it
 to be idempotent.
 
-For Windows I’ve included an experimental installation script `install.bat`.
+For Windows I’ve included an experimental installation script `install.ps1`.
 
 The dotfiles should work (more or less) out of the box, but to use all plugins
 we need to compile and/or install some dependencies.
