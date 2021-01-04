@@ -1,5 +1,13 @@
 Import-Module posh-git
 
+$profilePath = Split-Path $Profile
+$profileBefore = "$profilePath\Microsoft.PowerShell_profile_before.ps1"
+if (test-path -Path $profileBefore)
+{
+    . $profileBefore
+}
+. $ENV:HOMEDRIVE$ENV:HOMEPATH\.dotfiles\powershell.ps1
+
 function Invoke-GitCheckout { git checkout @args }
 Set-Alias gcco Invoke-GitCheckout
 
@@ -38,3 +46,32 @@ function Git-Pull { git pull }
 Set-Alias -Name ggl -Value Git-Pull
 function Git-Push { git push }
 Set-Alias -Name ggp -Value Git-Push
+
+function New-BashStyleAlias([string]$name, [string]$command)
+{
+    $sb = [scriptblock]::Create($command)
+    New-Item "Function:\global:$name" -Value $sb | Out-Null
+}
+
+New-BashStyleAlias dco        'docker-compose          @args'
+New-BashStyleAlias dcb        'docker-compose build    @args'
+New-BashStyleAlias dce        'docker-compose exec     @args'
+New-BashStyleAlias dcps       'docker-compose ps       @args'
+New-BashStyleAlias dcrestart  'docker-compose restart  @args'
+New-BashStyleAlias dcrm       'docker-compose rm       @args'
+New-BashStyleAlias dcr        'docker-compose run $c   @args'
+New-BashStyleAlias dcstop     'docker-compose stop     @args'
+New-BashStyleAlias dcup       'docker-compose up       @args'
+New-BashStyleAlias dcupd      'docker-compose up -d    @args'
+New-BashStyleAlias dcdn       'docker-compose down $c  @args'
+New-BashStyleAlias dcl        'docker-compose logs     @args'
+New-BashStyleAlias dclf       'docker-compose logs -f  @args'
+New-BashStyleAlias dcpull     'docker-compose pull     @args'
+New-BashStyleAlias dcstart    'docker-compose start    @args'
+
+$profileAfter = "$profilePath\Microsoft.PowerShell_profile_after.ps1"
+if (test-path -Path $profileAfter)
+{
+    . $profileAfter
+}
+

@@ -13,17 +13,21 @@ Function New-SymLink ($link, $target)
     invoke-expression "$command $link $target"
 }
 
-New-Symlink "$ENV:HOMEPATH\.bashrc" "$PSScriptRoot\bashrc" 
+New-Symlink "$ENV:HOMEDRIVE$ENV:HOMEPATH\.bashrc" "$PSScriptRoot\bashrc" 
 
-New-Symlink "$ENV:HOMEPATH\_vimrc" "$PSScriptRoot\vimrc"
+New-Symlink "$ENV:HOMEDRIVE$ENV:HOMEPATH\_vimrc" "$PSScriptRoot\vimrc"
 
-New-Symlink "$ENV:HOMEPATH\vimfiles" "$PSScriptRoot\vim"
+New-Symlink "$ENV:HOMEDRIVE$ENV:HOMEPATH\vimfiles" "$PSScriptRoot\vim"
 
-New-Symlink "$ENV:HOMEPATH\.vim" "$PSScriptRoot\vim"
+New-Symlink "$ENV:HOMEDRIVE$ENV:HOMEPATH\.vim" "$PSScriptRoot\vim"
 
-New-Symlink "$ENV:HOMEPATH\.gitconfig" "$PSScriptRoot\gitconfig"
+New-Symlink "$ENV:HOMEDRIVE$ENV:HOMEPATH\.gitconfig" "$PSScriptRoot\gitconfig"
 
-New-Symlink "$ENV:HOMEPATH\.dotfiles" "$PSScriptRoot\"
+New-Symlink "$ENV:HOMEDRIVE$ENV:HOMEPATH\.dotfiles" "$PSScriptRoot\"
+
+New-Symlink "$Profile" "$PSScriptRoot\Microsoft.PowerShell_profile.ps1"
+
+Install-Module posh-git -Scope CurrentUser
 
 echo "[+] Initializing dotbot and other git submodules"
 cd $PSScriptRoot\
