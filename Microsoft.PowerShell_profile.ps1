@@ -36,7 +36,20 @@ function Git-Commit { git commit -v $args }
 Set-Alias -Name ggc -Value Git-Commit
 function Git-Commit-Ammend { git commit -v --amend $args }
 Set-Alias -Name ggc! -Value Git-Commit-Ammend
+function Git-Fetch { git fetch }
+Set-Alias -Name ggf -Value Git-Fetch
 function Git-Pull { git pull }
 Set-Alias -Name ggl -Value Git-Pull
 function Git-Push { git push }
 Set-Alias -Name ggp -Value Git-Push
+function Git-Branch { git branch }
+Set-Alias -Name ggb -Value Git-Branch
+function Git-Branch-Remote { git branch --remote }
+Set-Alias -Name ggbr -Value Git-Branch-Remote
+function Git-Diff { git diff }
+Set-Alias -Name ggd -Value Git-Diff
+function Git-Diff-Cached { git diff --cached }
+Set-Alias -Name ggdca -Value Git-Diff-Cached
+function Get-Log-Oneline-Decorate-Graph { git log --oneline --decorate --graph }
+Set-Alias -Name gglog -Value Get-Log-Oneline-Decorate-Graph
+
