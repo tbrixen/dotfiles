@@ -1,10 +1,32 @@
 Import-Module posh-git
 
+function Test-Administrator {
+    $user = [Security.Principal.WindowsIdentity]::GetCurrent();
+    (New-Object Security.Principal.WindowsPrincipal $user).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
+}
+
+# Inspiration https://hodgkins.io/ultimate-powershell-prompt-and-git-setup#powershell-profile 
+function prompt {
+    $realLASTEXITCODE = $LASTEXITCODE
+
+    Write-Host
+
+    if (Test-Administrator) {  # Use different username if elevated
+        Write-Host "(Elevated) " -NoNewline -ForegroundColor White
+    }
+
+    Write-Host $($(Get-Location) -replace ($env:USERPROFILE).Replace('\','\\'), "~") -NoNewline -ForegroundColor Blue
+
+    $global:LASTEXITCODE = $realLASTEXITCODE
+
+    Write-VcsStatus
+
+    Write-Host
+    return "> "
+}
+
 function Invoke-GitCheckout { git checkout @args }
 Set-Alias gcco Invoke-GitCheckout
-
-$GitPromptSettings.DefaultPromptSuffix = '`n' + "$('>' * ($nestedPromptLevel + 1)) "
-
 # From https://stackoverflow.com/a/58844032/513325
 function ggco
 {
