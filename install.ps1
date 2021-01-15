@@ -1,6 +1,6 @@
 Function New-SymLink ($link, $target)
 {
-	echo "[+] Creating symlink to $target from $link"
+    echo "[+] Creating symlink to $target from $link"
     if (test-path -pathtype container $target)
     {
         $command = "cmd /c mklink /d"

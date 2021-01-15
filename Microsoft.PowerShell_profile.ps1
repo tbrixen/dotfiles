@@ -1,4 +1,8 @@
 Import-Module posh-git
+Import-Module ~/.dotfiles/posh-extras/cd-extras/cd-extras/cd-extras.psd1
+
+# Enable tab-completion as in Zsh with selection
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
 function Test-Administrator {
     $user = [Security.Principal.WindowsIdentity]::GetCurrent();
@@ -23,6 +27,41 @@ function prompt {
 
     Write-Host
     return "> "
+}
+
+# Displays a selectable grid of commands from the history
+Function h+
+{
+    Get-Content (Get-PSReadlineOption).HistorySavePath |
+      Out-GridView -Title "Command History - press CTRL to select multiple - Selected commands copied to clipboard" -OutputMode Multiple |
+      ForEach-Object -Begin { [Text.StringBuilder]$sb = ""} -Process { $null = $sb.AppendLine($_.CommandLine) } -End { $sb.ToString() | clip }
+}
+
+function Read-Manifest {
+  param([string]$jarfile)
+
+  Add-Type -Assembly System.IO.Compression.FileSystem
+
+  $jarfileAbsolute = (Resolve-Path $jarfile)
+
+  #extract list entries for dir myzipdir/c/ into myzipdir.zip
+  $zip = [IO.Compression.ZipFile]::OpenRead($jarfileAbsolute)
+  $entries=$zip.Entries | where {$_.FullName -like 'META-INF/MANIFEST.MF'}
+
+  #create dir for result of extraction
+  $parent = [System.IO.Path]::GetTempPath()
+  [string] $name = [System.Guid]::NewGuid()
+  New-Item -ItemType Directory -Path (Join-Path $parent $name) | Out-Null
+
+  $tempfolder = (Join-Path $parent $name)
+
+  #extraction
+  $entries | foreach {[IO.Compression.ZipFileExtensions]::ExtractToFile( $_, (Join-Path $tempfolder $_.Name)) }
+
+  #free object
+  $zip.Dispose()
+
+  Get-Content $tempfolder\MANIFEST.MF
 }
 
 function Invoke-GitCheckout { git checkout @args }
