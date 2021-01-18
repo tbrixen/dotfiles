@@ -4,6 +4,9 @@ Import-Module ~/.dotfiles/posh-extras/cd-extras/cd-extras/cd-extras.psd1
 # Enable tab-completion as in Zsh with selection
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
+# replace 'Ctrl+t' and 'Ctrl+r' with your preferred bindings: (PSFzf module)
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+
 function Test-Administrator {
     $user = [Security.Principal.WindowsIdentity]::GetCurrent();
     (New-Object Security.Principal.WindowsPrincipal $user).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
