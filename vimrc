@@ -203,6 +203,7 @@ nnoremap <Leader>pv :RunSilent open /tmp/vim-pandoc-out.pdf<CR>
 let g:vim_markdown_math=1
 " Disable conceal as is isn't disabled in insert mode
 let g:vim_markdown_conceal=0
+set conceallevel=0
 " }}}
 
 " Markdown-preview.nvim ---------------------- {{{
