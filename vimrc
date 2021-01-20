@@ -48,6 +48,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vim-which-key'
 Plug 'qpkorr/vim-bufkill'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
