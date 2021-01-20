@@ -199,7 +199,6 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 nnoremap <Leader>pp :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
 nnoremap <Leader>pv :RunSilent open /tmp/vim-pandoc-out.pdf<CR>
 
-let g:vim_markdown_folding_level=2
 " Enable latex math highlight
 let g:vim_markdown_math=1
 " Disable conceal as is isn't disabled in insert mode
