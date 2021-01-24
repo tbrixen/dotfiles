@@ -50,6 +50,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'qpkorr/vim-bufkill'
 Plug 'mhinz/vim-startify'
 Plug 'unblevable/quick-scope'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -503,6 +504,14 @@ let g:vimtex_view_general_options
     \ = '-reuse-instance -forward-search @tex @line @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 let g:tex_flavor = 'latex'
+" }}}
+
+" VimWiki ---------------------- {{{
+let g:vimwiki_list = [{
+  \ 'path': '~/vimwiki/',
+  \ 'syntax': 'markdown',
+  \ 'ext': '.md'
+\}]
 " }}}
 
 " 
