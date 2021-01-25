@@ -514,5 +514,3 @@ let g:vimwiki_list = [{
 \}]
 " }}}
 
-" 
-
