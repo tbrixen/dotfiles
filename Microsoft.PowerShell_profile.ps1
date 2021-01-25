@@ -94,6 +94,8 @@ function ggco
 
 function Git-Status { git status $args }
 Set-Alias -Name ggst -Value Git-Status
+function Git-Add { git add $args }
+Set-Alias -Name gga -Value Git-Add
 function Git-Add-Updated { git add --update $args }
 Set-Alias -Name ggau -Value Git-Add-Updated
 function Git-Commit { git commit -v $args }
