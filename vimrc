@@ -51,6 +51,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'mhinz/vim-startify'
 Plug 'unblevable/quick-scope'
 Plug 'vimwiki/vimwiki'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
@@ -519,4 +520,8 @@ let g:vimwiki_list = [{
 \}]
 " }}}
 
+" Editorconfig ---------------------- {{{
+" Set exclude pattern as pr their documentation
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+" }}}
 
