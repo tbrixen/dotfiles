@@ -117,3 +117,6 @@ Set-Alias -Name ggdca -Value Git-Diff-Cached
 function Get-Log-Oneline-Decorate-Graph { git log --oneline --decorate --graph }
 Set-Alias -Name gglog -Value Get-Log-Oneline-Decorate-Graph
 
+function Vimwiki-Goto { vim -c "VimwikiIndex" -c "VimwikiGoto $args" }
+Set-Alias -Name ww -Value Vimwiki-Goto
+
