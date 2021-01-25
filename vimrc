@@ -509,15 +509,14 @@ let g:tex_flavor = 'latex'
 " VimWiki ---------------------- {{{
 let g:vimwiki_list = [{
   \ 'path': '~/vimwiki/content',
-  \ 'path_html': '~/vimwiki/_site',
+  \ 'path_html': '~/vimwiki/html',
   \ 'template_path': '~/vimwiki/templates/',
   \ 'syntax': 'markdown',
   \ 'ext': '.md',
-  \ 'auto_export': 1,
-  \ 'automatic_nested_syntaxes':1,
-  \ 'template_default':'markdown',
-  \ 'custom_wiki2html': '~/dotfiles/bin/wiki2html.sh',
-  \ 'template_ext':'.html'
+  \ 'template_default':'default',
+  \ 'custom_wiki2html': 'vimwiki_markdown',
+  \ 'template_ext':'.tpl'
 \}]
 " }}}
+
 
