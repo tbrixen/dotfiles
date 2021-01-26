@@ -525,3 +525,10 @@ let g:vimwiki_list = [{
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " }}}
 
+" }}} End of PLUGINS SETTINGS
+
+" SOURCE VIMRC_LOCAL_AFTER ---------------------- {{{
+if filereadable(expand("~/.vimrc_local_after"))
+  source ~/.vimrc_local_after
+endif
+" }}}
