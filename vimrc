@@ -206,7 +206,6 @@ nnoremap <Leader>pv :RunSilent open /tmp/vim-pandoc-out.pdf<CR>
 let g:vim_markdown_math=1
 " Disable conceal as is isn't disabled in insert mode
 let g:vim_markdown_conceal=0
-set conceallevel=0
 " }}}
 
 " Markdown-preview.nvim ---------------------- {{{
@@ -310,6 +309,8 @@ let g:ale_sign_warning = '⚠'
 " workaround needed when you use elzr/vim-json with indentLine
 " https://github.com/elzr/vim-json/issues/23
 let g:indentLine_noConcealCursor=""
+" Grr, usual set conceallevel=0 doesn't work. Doing this worked
+let g:indentLine_setConceal = 0
 " }}}
 
 " vim-tmux-navigator ---------------------- {{{
