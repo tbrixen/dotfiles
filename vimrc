@@ -518,6 +518,8 @@ let g:vimwiki_list = [{
   \ 'custom_wiki2html': 'vimwiki_markdown',
   \ 'template_ext':'.tpl'
 \}]
+" Do not consider every .md file as a wiki
+let g:vimwiki_global_ext = 0
 " }}}
 
 " Editorconfig ---------------------- {{{
