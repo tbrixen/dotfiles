@@ -490,14 +490,6 @@ nnoremap <silent><nowait> ,k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> ,p  :<C-u>CocListResume<CR>
 " }}}
 
-" UltiSnips ---------------------- {{{
-" Even though :verbose imap <tab> showed UltiSnips\map_keys.vim it still didn't trigger
-" Found the following solution in https://github.com/SirVer/ultisnips/issues/512
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-" }}}
-
 " VimTex ---------------------- {{{
 " settings for sumatraPDF
 let g:vimtex_view_general_viewer = 'SumatraPDF'
