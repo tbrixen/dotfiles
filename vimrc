@@ -52,6 +52,7 @@ Plug 'mhinz/vim-startify'
 Plug 'unblevable/quick-scope'
 Plug 'vimwiki/vimwiki'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
 
@@ -518,6 +519,11 @@ let g:vimwiki_global_ext = 0
 " Editorconfig ---------------------- {{{
 " Set exclude pattern as pr their documentation
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+" }}}
+"
+" vim-sneak ---------------------- {{{
+" Use s instead of ;
+let g:sneak#s_next = 1
 " }}}
 
 " }}} End of PLUGINS SETTINGS
