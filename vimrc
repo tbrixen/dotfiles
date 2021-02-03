@@ -524,6 +524,8 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " vim-sneak ---------------------- {{{
 " Use s instead of ;
 let g:sneak#s_next = 1
+" Determine case sensitivity by 'ignorecase' and 'smartcase'
+let g:sneak#use_ic_scs = 1
 " }}}
 
 " }}} End of PLUGINS SETTINGS
