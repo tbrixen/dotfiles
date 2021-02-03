@@ -189,6 +189,7 @@ autocmd BufNewFile,BufRead *.xml if search('<project name', 'nw') | set ft=ant |
 
 autocmd syntax groovy,Jenkinsfile setlocal foldmethod=indent | setlocal foldlevel=1
 autocmd syntax ant setlocal foldmethod=indent | setlocal foldlevel=1
+autocmd syntax markdown setlocal foldlevel=1
 
 " }}}
 
