@@ -282,7 +282,7 @@ let g:ackprg = 'rg --vimgrep --no-heading'
 " }}}
 
 " Vim-rooter ---------------------- {{{
-let g:rooter_patterns = ['vimrooter', '.git/']
+let g:rooter_patterns = ['vimrooter', '.git/', '.svn/']
 " }}}
 
 " ale ---------------------- {{{
