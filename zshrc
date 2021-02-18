@@ -40,9 +40,12 @@ plugins=(
   sudo
   tmux
   ansible
+  zsh-z
 )
 
 plugins=(you-should-use $plugins)
+
+zstyle ':completion:*' menu select
 
 source $ZSH/oh-my-zsh.sh
 
