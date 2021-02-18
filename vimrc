@@ -89,7 +89,8 @@ set tabstop=2       " Number of spaces a \t counts for
 set softtabstop=2   " Number of spaces a \t count for during editing
 set shiftwidth=2    " Number of spaces for each step of (auto)indent
 
-set colorcolumn=80
+set colorcolumn=100
+set textwidth=100
 
 " If RipGrep is available, use it for grep
 if executable('rg')
