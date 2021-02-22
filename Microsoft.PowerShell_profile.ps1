@@ -1,5 +1,6 @@
 Import-Module posh-git
 Import-Module ~/.dotfiles/posh-extras/cd-extras/cd-extras/cd-extras.psd1
+Import-Module git-aliases -DisableNameChecking
 
 # Enable tab-completion as in Zsh with selection
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
@@ -83,33 +84,6 @@ function ggco
 
     git checkout $branch;
 }
-
-function Git-Status { git status $args }
-Set-Alias -Name ggst -Value Git-Status
-function Git-Add { git add $args }
-Set-Alias -Name gga -Value Git-Add
-function Git-Add-Updated { git add --update $args }
-Set-Alias -Name ggau -Value Git-Add-Updated
-function Git-Commit { git commit -v $args }
-Set-Alias -Name ggc -Value Git-Commit
-function Git-Commit-Ammend { git commit -v --amend $args }
-Set-Alias -Name ggc! -Value Git-Commit-Ammend
-function Git-Fetch { git fetch }
-Set-Alias -Name ggf -Value Git-Fetch
-function Git-Pull { git pull }
-Set-Alias -Name ggl -Value Git-Pull
-function Git-Push { git push }
-Set-Alias -Name ggp -Value Git-Push
-function Git-Branch { git branch }
-Set-Alias -Name ggb -Value Git-Branch
-function Git-Branch-Remote { git branch --remote }
-Set-Alias -Name ggbr -Value Git-Branch-Remote
-function Git-Diff { git diff }
-Set-Alias -Name ggd -Value Git-Diff
-function Git-Diff-Cached { git diff --cached }
-Set-Alias -Name ggdca -Value Git-Diff-Cached
-function Get-Log-Oneline-Decorate-Graph { git log --oneline --decorate --graph }
-Set-Alias -Name gglog -Value Get-Log-Oneline-Decorate-Graph
 
 function Vimwiki-Goto { vim -c "VimwikiIndex" -c "VimwikiGoto $args" }
 Set-Alias -Name ww -Value Vimwiki-Goto
