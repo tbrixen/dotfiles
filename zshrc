@@ -82,6 +82,10 @@ export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Fix MacOS High Sierra issue with ansible cloudalchemy.node-exporter
+# https://github.com/ansible/ansible/issues/32499#issuecomment-341578864
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 # Press Ctrl + Space to accept and execute a suggestion from zsh-autosuggestions
 bindkey '^ ' autosuggest-execute
 
