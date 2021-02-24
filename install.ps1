@@ -30,6 +30,7 @@ New-Symlink "$Profile" "$PSScriptRoot\Microsoft.PowerShell_profile.ps1"
 Install-Module posh-git -Scope CurrentUser
 Install-Module -Name PSFzf -RequiredVersion 2.1.0
 Install-Module git-aliases -Scope CurrentUser -AllowClobber
+Install-Module z -AllowClobber
 
 echo "[+] Initializing dotbot and other git submodules"
 cd $PSScriptRoot\

@@ -1,6 +1,7 @@
 Import-Module posh-git
 Import-Module ~/.dotfiles/posh-extras/cd-extras/cd-extras/cd-extras.psd1
 Import-Module git-aliases -DisableNameChecking
+Import-Module z
 
 # Enable tab-completion as in Zsh with selection
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
