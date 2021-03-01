@@ -136,3 +136,64 @@ Register-ArgumentCompleter -Native -CommandName 'ssh' -ScriptBlock {
 		}
 	}
 }
+
+# docker-compose Set-Alias
+# From https://gist.github.com/pokev25/0efa6747128b1738a3d5c71fc3b2d117
+function DockerComposeUp {
+    docker-compose up $args
+}
+function DockeComposeBuild {
+    docker-compose build
+}
+function DockeComposeExec {
+    docker-compose exec $args
+}
+function DockeComposePs {
+    docker-compose ps $args
+}
+function DockeComposeRestart {
+    docker-compose restart
+}
+function DockeComposeRm {
+    docker-compose rm $args
+}
+function DockeComposeRun {
+    docker-compose run $args
+}
+function DockeComposeStop {
+    docker-compose stop $args
+}
+function DockeComposeUpd {
+    docker-compose up -d
+}
+function DockeComposeDown {
+    docker-compose down
+}
+function DockeComposeLogs {
+    docker-compose logs
+}
+function DockeComposeLogsf {
+    docker-compose logs -f
+}
+function DockeComposePull {
+    docker-compose pull
+}
+function DockeComposeStart {
+    docker-compose start
+}
+Set-Alias dco docker-compose
+Set-Alias dcb DockeComposeBuild
+Set-Alias dce DockeComposeExec
+Set-Alias dcps DockeComposePs
+Set-Alias dcrestart DockeComposeRestart
+Set-Alias dcrm DockeComposeRm
+Set-Alias dcr DockeComposeRun
+Set-Alias dcstop DockeComposeStop
+Set-Alias dcup DockerComposeUp
+Set-Alias dcupd DockeComposeUpd
+Set-Alias dcdn DockeComposeDown
+Set-Alias dcl DockeComposeLogs
+Set-Alias dclf DockeComposeLogsf
+Set-Alias dcpull DockeComposePull
+Set-Alias dcstart DockeComposeStart
+
