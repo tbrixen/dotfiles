@@ -347,7 +347,7 @@ map g# <Plug>(incsearch-nohl-g#)
 " }}}
 "
 " coc-nvim ---------------------- {{{
-let g:coc_global_extensions = ['coc-sh', 'coc-snippets', 'coc-vimlsp', 'coc-json', 'coc-markdownlint', 'coc-vimtex']
+let g:coc_global_extensions = ['coc-sh', 'coc-snippets', 'coc-vimlsp', 'coc-json', 'coc-markdownlint', 'coc-vimtex', 'coc-groovy', 'coc-powershell']
 " TextEdit might fail if hidden is not set.
 set hidden
 
