@@ -27,6 +27,7 @@
     ~/.vim:
     ~/.cvsignore:
     ~/.zshrc:
-    $PsHome/Microsoft.PowerShell_profile.ps1:
+      # TODO: How to make this not fail if $PsHome is not present
+      #$PsHome/Microsoft.PowerShell_profile.ps1: 
 
 

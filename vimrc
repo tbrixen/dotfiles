@@ -348,7 +348,9 @@ map g# <Plug>(incsearch-nohl-g#)
 "
 " coc-nvim ---------------------- {{{
 let g:coc_global_extensions = [
+  \ 'coc-docker',
   \ 'coc-groovy',
+  \ 'coc-java',
   \ 'coc-json',
   \ 'coc-markdownlint',
   \ 'coc-powershell',
