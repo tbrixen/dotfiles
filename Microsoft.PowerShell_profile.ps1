@@ -14,6 +14,18 @@ function Test-Administrator {
     (New-Object Security.Principal.WindowsPrincipal $user).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
 }
 
+function sudo {
+   Start-Process powershell.exe -Verb Runas
+}
+
+function sudo-command {
+   Start-Process powershell.exe -Verb Runas -ArgumentList "-NoExit -Command $args"
+}
+
+function sudo-file {
+   Start-Process powershell.exe -Verb Runas -ArgumentList "-NoExit -File $args"
+}
+
 # Inspiration https://hodgkins.io/ultimate-powershell-prompt-and-git-setup#powershell-profile 
 function prompt {
     $realLASTEXITCODE = $LASTEXITCODE
@@ -88,6 +100,19 @@ function ggco
 
 function Vimwiki-Goto { vim -c "VimwikiIndex" -c "VimwikiGoto $args" }
 Set-Alias -Name ww -Value Vimwiki-Goto
+
+function Show-Notication {
+  param(
+    $message,
+    $title = "Script Completed!")
+
+  [reflection.assembly]::loadwithpartialname("System.Windows.Forms")
+  [reflection.assembly]::loadwithpartialname("System.Drawing")
+  $notify = new-object system.windows.forms.notifyicon
+  $notify.icon = [System.Drawing.SystemIcons]::Information
+  $notify.visible = $true
+  $notify.showballoontip(10000, $title, $message, [system.windows.forms.tooltipicon]::None)
+}
 
 # Tab-completion for ~/.ssh/config and ~/.ssh/known_hosts
 # Stolen from https://github.com/michaeloyer/windows-setup/blob/master/Setup/PowershellProfile/ModulesToInstall/ProfileImport/TabCompletion.ps1
