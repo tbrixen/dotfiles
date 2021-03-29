@@ -26,25 +26,26 @@ function sudo-file {
    Start-Process powershell.exe -Verb Runas -ArgumentList "-NoExit -File $args"
 }
 
-# Inspiration https://hodgkins.io/ultimate-powershell-prompt-and-git-setup#powershell-profile 
-function prompt {
-    $realLASTEXITCODE = $LASTEXITCODE
+function global:PromptWriteErrorInfo() {
+    if ($global:GitPromptValues.DollarQuestion) { return }
 
-    Write-Host
-
-    if (Test-Administrator) {  # Use different username if elevated
-        Write-Host "(Elevated) " -NoNewline -ForegroundColor White
+    if ($global:GitPromptValues.LastExitCode) {
+        "`e[31m(" + $global:GitPromptValues.LastExitCode + ") `e[0m"
     }
-
-    Write-Host $($(Get-Location) -replace ($env:USERPROFILE).Replace('\','\\'), "~") -NoNewline -ForegroundColor Blue
-
-    $global:LASTEXITCODE = $realLASTEXITCODE
-
-    Write-VcsStatus
-
-    Write-Host
-    return "> "
+    else {
+        "`e[31m! `e[0m"
+    }
 }
+function global:PromptWriteElevatedInfo() {
+    if (Test-Administrator) {  # Use different username if elevated
+        "(Elevated) "
+    }
+}
+
+$GitPromptSettings.DefaultPromptPath.ForegroundColor = 0x57c7ff
+$GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
+$global:GitPromptSettings.DefaultPromptBeforeSuffix.Text =
+  '`n$(PromptWriteErrorInfo)$(PromptWriteElevatedInfo)'
 
 function Read-Manifest {
   param([string]$jarfile)
