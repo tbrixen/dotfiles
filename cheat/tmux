@@ -15,6 +15,8 @@ Ctrl-x space    Toggle between pane layouts
 Ctrl-x Ctrl-O   Swap panes
 :break-pan -t : Break current pane into a new window
 Ctrl-x !        Break current pane into a new window and swtich to it
+:join-pane -s 2 -t 1  Move pane of window 2 into a pane of window 1
+Ctrl-x S or V   Fetch a pane from another window
 
 # Window control
 Ctrl-x c        Create windows
