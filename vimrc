@@ -292,6 +292,11 @@ let g:rooter_patterns = ['vimrooter', '.git/', '.svn/']
 let g:ale_linters = {
 \   'sh': ['shellcheck'],
 \   'Dockerfile': ['hadolint'],
+\   'confluencewiki': ['vale'],
+\}
+
+let g:ale_linter_aliases = {
+\   'confluencewiki': 'text',
 \}
 
 let g:ale_fixers = {
