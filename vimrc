@@ -54,6 +54,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/confluencewiki.vim'
+Plug 'michal-h21/vimwiki-sync'
 
 call plug#end()
 
