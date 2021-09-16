@@ -115,6 +115,9 @@ map <SPACE> <leader>
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 
+" Paste from clipboard
+imap <C-v> <C-r>+
+
 " Jump between bracket pairs by tab
 nnoremap <tab> %
 vnoremap <tab> %
