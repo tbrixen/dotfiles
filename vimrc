@@ -55,6 +55,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/confluencewiki.vim'
 Plug 'michal-h21/vimwiki-sync'
+Plug 'vim-scripts/ReplaceWithRegister'
 
 call plug#end()
 
