@@ -176,8 +176,8 @@ endif
 " CUSTOM COMMANDS AND FUNCTIONS ---------------------- {{{
 " Insert time
 " Advanced use: strftime("%Y-%m-%d %a %H:%M %p")
-nmap <F3> i<C-R>=strftime("%H:%M %p")<CR><Esc>
-imap <F3> <C-R>=strftime("%H:%M %p")<CR>
+nmap <F3> A<C-R>=strftime("%H:%M %p")<CR><Esc>xjo<C-R>=strftime("%H:%M %p")<CR><Esc>xa-<Esc>o<Esc>kO
+imap <F3> <ESC>A<C-R>=strftime("%H:%M %p")<CR><Esc>xjo<C-R>=strftime("%H:%M %p")<CR><Esc>xa-<Esc>o<Esc>kO
 nmap <F12> <ESC>:w <bar> execute 'silent !\%USERPROFILE\%\Documents\Noter\journal\update.bat' <bar> e <bar> normal zo<CR>
 imap <F12> <ESC>:w <bar> execute 'silent !\%USERPROFILE\%\Documents\Noter\journal\update.bat' <bar> e <bar> normal zo<CR>
 
