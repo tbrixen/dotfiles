@@ -14,18 +14,6 @@ function Test-Administrator {
     (New-Object Security.Principal.WindowsPrincipal $user).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
 }
 
-function sudo {
-   Start-Process powershell.exe -Verb Runas
-}
-
-function sudo-command {
-   Start-Process powershell.exe -Verb Runas -ArgumentList "-NoExit -Command $args"
-}
-
-function sudo-file {
-   Start-Process powershell.exe -Verb Runas -ArgumentList "-NoExit -File $args"
-}
-
 function global:PromptWriteErrorInfo() {
     if ($global:GitPromptValues.DollarQuestion) { return }
 
