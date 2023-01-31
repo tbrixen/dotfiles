@@ -25,6 +25,7 @@
     enable_statusline_mode = false
     project_rooter_patterns = ['vimrooter', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
     filemanager = "defx"
+    projects_cache_num = 50
 
 # Enable autocomplete layer
 [[layers]]
