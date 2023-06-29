@@ -41,11 +41,19 @@ function! SpaceVim#layers#sessions#plugins() abort
   return plugins
 endfunction
 
+  lua vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], {})
+  lua require("persistence").setup { 
+    \ dir = vim.fn.expand(vim.fn.stdpath("state") .. "/sessions/"),
+    \ options = { "buffers", "curdir", "tabpages", "winsize" },
+    \ } 
+
 function! SpaceVim#layers#sessions#config() abort
   "call SpaceVim#mapping#space#regesit_lang_mappings('sessions', function('s:language_specified_mappings'))
-  "lua require("persistence").setup { }
-  lua vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], {})
 endfunction
+
+call SpaceVim#layers#sessions#plugins()
+call SpaceVim#layers#sessions#config()
+
 
 function! SpaceVim#layers#sessions#health() abort
   call SpaceVim#layers#sessions#plugins()

@@ -26,6 +26,12 @@
     project_rooter_patterns = ['vimrooter', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/']
     filemanager = "defx"
     projects_cache_num = 50
+    spacevim_sidebar_width = 50
+    bootstrap_before = 'myspacevim#before'
+
+[[custom_plugins ]]
+  repo = 'folke/persistence'
+  merged = 0
 
 # Enable autocomplete layer
 [[layers]]
@@ -44,16 +50,19 @@
 [[layers]]
   name = "lang#markdown"
   format_on_save = false
+  enabled_formater = ["prettier"]
+  listItemChar = '*'
 
 [[layers]]
   name = "lang#terraform"
 
-[[layers]]
-  name = "sessions"
+#[[layers]]
+#  name = "sessions"
 
 [[layers]]
   name = 'format'
   format_on_save = true
+  #format_method = "codefmt"
 
 [[layers]]
   name = "denite"

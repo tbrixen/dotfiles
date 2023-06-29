@@ -36,6 +36,7 @@
 
 function! SpaceVim#layers#lang#terraform#plugins() abort
   let plugins = []
+  " vim-terraform: sets up mapping from misc .tf files to be highlighed as HCL
   call add(plugins, ['hashivim/vim-terraform', {'merged' : '0'}])
   return plugins
 endfunction
