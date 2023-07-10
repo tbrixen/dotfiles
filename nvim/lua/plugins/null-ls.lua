@@ -6,7 +6,7 @@ return {
 
       opts.sources = {
         null_ls.builtins.formatting.shfmt.with({
-          args = { "-i", "4", "-sr" }, -- https://github.com/mvdan/sh/blob/master/cmd/shfmt/shfmt.1.scd
+          args = { "-i", "2", "-sr" }, -- https://github.com/mvdan/sh/blob/master/cmd/shfmt/shfmt.1.scd
         }),
       }
       if type(opts.sources) == "table" then
