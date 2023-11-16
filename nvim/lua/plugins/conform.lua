@@ -1,21 +1,20 @@
 return {
   {
     "stevearc/conform.nvim",
-    opts = function(_, opts)
-      local conform = require("conform")
+    opts = {
+      formatters_by_ft = {
+        ["markdown"] = { "prettier" },
+        ["json"] = { "prettier" },
+        ["graphql"] = { "prettier" },
+        ["javascript"] = { "prettier" },
+        ["typescript"] = { "prettier" },
+      },
 
-      conform.formatters = {
+      formatters = {
         shfmt = {
           prepend_args = { "-i", "2", "-sr" },
         },
-      }
-      conform.formatters_by_ft = {
-        markdown = { "prettier" },
-        json = { "prettier" },
-        graphql = { "prettier" },
-        javascript = { "prettier" },
-        typescript = { "prettier" },
-      }
-    end,
+      },
+    },
   },
 }
