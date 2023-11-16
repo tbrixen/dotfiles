@@ -10,7 +10,6 @@ return {
         },
       }
       conform.formatters_by_ft = {
-        tf = { "tfsec" },
         markdown = { "prettier" },
         json = { "prettier" },
         graphql = { "prettier" },
