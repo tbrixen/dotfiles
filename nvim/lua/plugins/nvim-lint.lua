@@ -7,6 +7,14 @@ return {
         tf = { "terraform_validate", "tfsec" },
         markdown = { "markdownlint" },
       },
+      linters = {
+        markdownlint = {
+          args = {
+            "--disable",
+            "MD013",
+          },
+        },
+      },
     },
   },
 }
