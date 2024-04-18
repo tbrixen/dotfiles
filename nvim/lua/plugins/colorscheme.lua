@@ -6,7 +6,11 @@ return {
     -- you can do it like this with a config function
     config = function()
       require("catppuccin").setup({
-        flavour = "mocha",
+        flavour = "auto",
+        background = { -- :h background
+          light = "latte",
+          dark = "mocha",
+        },
         -- configurations
       })
     end,
