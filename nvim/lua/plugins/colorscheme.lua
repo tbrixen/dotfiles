@@ -11,7 +11,13 @@ return {
           light = "latte",
           dark = "mocha",
         },
-        -- configurations
+        integrations = {
+          which_key = false,
+          leap = true,
+          neotree = true,
+          noice = true,
+          lsp_trouble = true,
+        },
       })
     end,
     -- or just use opts table
@@ -24,5 +30,15 @@ return {
     opts = {
       colorscheme = "catppuccin",
     },
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    config = function()
+      require("lualine").setup({
+        options = {
+          theme = "catppuccin",
+        },
+      })
+    end,
   },
 }
