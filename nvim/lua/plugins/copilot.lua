@@ -6,6 +6,7 @@ return {
       suggestion = { enabled = true },
       filetypes = {
         yaml = true,
+        markdown = true,
       },
     })
   end,
