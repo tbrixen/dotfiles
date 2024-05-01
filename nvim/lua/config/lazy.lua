@@ -6,6 +6,7 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath })
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+vim.g.python3_host_prog = "/Users/tbrixen/.pyenv/versions/py3nvim/bin/python"
 
 require("lazy").setup({
   spec = {
