@@ -14,6 +14,11 @@ return {
         Review = "Review the following code and provide concise suggestions.",
         Tests = "Briefly explain how the selected code works, then generate unit tests.",
         Refactor = "Refactor the code to improve clarity and readability.",
+        TextEnhance = "I'd like you to look at the text I wrote and edit it to make it sound more natural to a native English speaker. Do only minimal/minor edits without changing the text's tone.",
+        TextSummarize = "Please summarize the following text.",
+        TextSpelling = "Please correct any grammar and spelling errors in the following text.",
+        TextWording = "Please improve the grammar and wording of the following text.",
+        TextConcise = "Please rewrite the following text to make it more concise.",
       },
     },
     build = function()
@@ -21,7 +26,6 @@ return {
     end,
     event = "VeryLazy",
     keys = {
-      { "<leader>ccb", ":CopilotChatBuffer ", desc = "CopilotChat - Chat with current buffer" },
       { "<leader>cce", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
       { "<leader>cct", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
       {
@@ -30,16 +34,34 @@ return {
         desc = "CopilotChat - Toggle Vsplit", -- Toggle vertical split
       },
       {
-        "<leader>ccv",
-        ":CopilotChatVisual ",
-        mode = "x",
-        desc = "CopilotChat - Open in vertical split",
+        "<leader>ccte",
+        ":CopilotChatTextEnhance ",
+        mode = "v",
+        desc = "CopilotChat - Enhance text",
       },
       {
-        "<leader>ccx",
-        ":CopilotChatInPlace<cr>",
-        mode = "x",
-        desc = "CopilotChat - Run in-place code",
+        "<leader>cctz",
+        ":CopilotChatTextSummarize ",
+        mode = "v",
+        desc = "CopilotChat - Summarize text",
+      },
+      {
+        "<leader>ccts",
+        ":CopilotChatTextSpelling ",
+        mode = "v",
+        desc = "CopilotChat - Fix grammar and spelling",
+      },
+      {
+        "<leader>cctw",
+        ":CopilotChatTextWording ",
+        mode = "v",
+        desc = "CopilotChat - Improve grammar and wording",
+      },
+      {
+        "<leader>cctc",
+        ":CopilotChatTextConcise ",
+        mode = "v",
+        desc = "CopilotChat - Rewrite to make it more concise",
       },
       {
         "<leader>ccf",
@@ -67,6 +89,7 @@ return {
           local actions = require("CopilotChat.actions")
           require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
         end,
+        mode = "v",
         desc = "CopilotChat - Prompt actions",
       },
       -- Quick chat with Copilot
