@@ -2,3 +2,6 @@ Kubernetes
 CRDs/!
 CRDs
 CRs
+Nginx
+ConfigMap
+mTLS
