@@ -55,5 +55,41 @@ wezterm.on("update-status", function(window)
 	}))
 end)
 
+------ Maping keys
+
+--- Fix no PATH when starting from Finger
+---   No viable candidates found in PATH "/usr/bin:/bin:/usr/sbin:/sbin"
+config.set_environment_variables = {
+	PATH = "/opt/homebrew/bin:" .. os.getenv("PATH"),
+}
+
+-- Table mapping keypresses to actions
+config.keys = {
+	-- Sends ESC + b and ESC + f sequence, which is used
+	-- for telling your shell to jump back/forward.
+	{
+		-- When the left arrow is pressed
+		key = "LeftArrow",
+		-- With the "Option" key modifier held down
+		mods = "OPT",
+		-- Perform this action, in this case - sending ESC + B
+		-- to the terminal
+		action = wezterm.action.SendString("\x1bb"),
+	},
+	{
+		key = "RightArrow",
+		mods = "OPT",
+		action = wezterm.action.SendString("\x1bf"),
+	},
+	{
+		key = ",",
+		mods = "SUPER",
+		action = wezterm.action.SpawnCommandInNewTab({
+			cwd = wezterm.home_dir,
+			args = { "nvim", wezterm.config_file },
+		}),
+	},
+}
+
 -- Returns our config to be evaluated. We must always do this at the bottom of this file
 return config
