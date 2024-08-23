@@ -1,4 +1,5 @@
 -- Used the following as a inspiration https://alexplescan.com/posts/2024/08/10/wezterm/
+-- Lua learning: https://www.lua.org/start.html
 -- Import the wezterm module
 local wezterm = require("wezterm")
 -- Import our new module (put this near the top of your wezterm.lua)
