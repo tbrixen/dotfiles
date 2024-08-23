@@ -31,6 +31,7 @@ config.window_frame = {
 	font = wezterm.font({ family = "Berkeley Mono", weight = "Bold" }),
 	font_size = 11,
 }
+config.tab_bar_at_bottom = true
 
 wezterm.on("update-status", function(window)
 	-- Grab the utf8 character for the "powerline" left facing
