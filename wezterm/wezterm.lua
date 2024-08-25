@@ -33,7 +33,7 @@ config.window_frame = {
 }
 config.tab_bar_at_bottom = true
 
-wezterm.on("update-status", function(window)
+wezterm.on("update-status", function(window, pane)
 	-- Grab the utf8 character for the "powerline" left facing
 	-- solid arrow.
 	local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
@@ -45,6 +45,14 @@ wezterm.on("update-status", function(window)
 	local bg = color_scheme.background
 	local fg = color_scheme.foreground
 
+	local cwd = ""
+	local cwd_uri = pane:get_current_working_dir()
+	if cwd_uri then
+		if type(cwd_uri) == "userdata" then
+			cwd = cwd_uri.file_path
+		end
+	end
+
 	window:set_right_status(wezterm.format({
 		-- First, we draw the arrow...
 		{ Background = { Color = "none" } },
@@ -53,7 +61,7 @@ wezterm.on("update-status", function(window)
 		-- Then we draw our text
 		{ Background = { Color = bg } },
 		{ Foreground = { Color = fg } },
-		{ Text = " " .. wezterm.hostname() .. " " },
+		{ Text = " " .. cwd .. " " },
 	}))
 end)
 
