@@ -8,9 +8,9 @@ local appearance = require("appearance")
 local config = wezterm.config_builder()
 
 if appearance.is_dark() then
-	config.color_scheme = "catppuccin-macchiato"
+	config.color_scheme = "Catppuccin Macchiato"
 else
-	config.color_scheme = "catppuccin-latte"
+	config.color_scheme = "Catppuccin Latte"
 end
 config.font_size = 13
 
@@ -24,13 +24,8 @@ config.macos_window_background_blur = 30
 -- you want to keep the window controls visible and integrate
 -- them into the tab bar.
 config.window_decorations = "RESIZE"
--- Sets the font for the window frame (tab bar)
-config.window_frame = {
-	-- Berkeley Mono for me again, though an idea could be to try a
-	-- serif font here instead of monospace for a nicer look?
-	font = wezterm.font({ family = "Berkeley Mono", weight = "Bold" }),
-	font_size = 11,
-}
+-- Do not use the fancy tab bar, as it does not follow the color_scheme
+config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 
 wezterm.on("update-status", function(window, pane)
