@@ -1,0 +1,21 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[kubernetes]
+disabled = false
+
+[[kubernetes.contexts]]
+# The following entry matches on the format (`dev-20230919`)
+# and renames every matching kube context into a more readable format (`dev`):
+context_pattern = ".*prod.*"
+context_alias = "prod"
+style = "red"
+
+[[kubernetes.contexts]]
+# The following entry matches on the format (`dev-20230919`)
+# and renames every matching kube context into a more readable format (`dev`):
+context_pattern = "(?P<cluster>[\\w-]+)-\\d+"
+context_alias = "$cluster"
+
+
+
