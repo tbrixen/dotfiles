@@ -54,8 +54,6 @@ export EDITOR="nvim"
 
 alias lg="lazygit"
 
-source "$HOME/.cargo/env"
-
 # Lazy-load pyenv (saves ~200ms)
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/shims:$PATH"
