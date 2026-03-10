@@ -18,6 +18,7 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/bin/tamp: bin/tamp
     ~/.bashrc:
     ~/.tmux:
     ~/.tmux.conf:
