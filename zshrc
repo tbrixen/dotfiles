@@ -58,6 +58,10 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 alias rmdir='rmdir -v'
+
+amp() {
+  command amp --visibility private "$@"
+}
 if [[ -n "$IS_MAC" ]]; then
   _load_wiz_creds() {
     if [[ -z "$WIZ_CLIENT_ID" ]]; then
@@ -67,9 +71,6 @@ if [[ -n "$IS_MAC" ]]; then
       export WIZ_DATACENTER=$(op read --account=Lunar "op://Private/Wiz MCP/WIZ_DATACENTER")
       echo "✅ MCP credentials loaded."
     fi
-  }
-  amp() {
-    command amp --visibility private "$@"
   }
   ampwiz() {
     _load_wiz_creds
@@ -140,6 +141,7 @@ bindkey '^ ' autosuggest-accept
 
 if [[ -n "$IS_MAC" ]]; then
   [[ -f "$HOME/lunar/gravity-tools/scripts/sync-hook.sh" ]] && source "$HOME/lunar/gravity-tools/scripts/sync-hook.sh"
+  alias gra-skill-sync='bash "/Users/tbrixen/lunar/gravity-tools/scripts/setup-skills.sh" --sync'
 fi
 
 # Machine-local overrides & secrets (not committed)
