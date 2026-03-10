@@ -1,107 +1,90 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Load Zinit
+if [[ ! -f ~/.zinit/bin/zinit.zsh ]]; then
+  git clone https://github.com/zdharma-continuum/zinit.git ~/.zinit/bin
+fi
+source ~/.zinit/bin/zinit.zsh
 
-export ZSH="$HOME/.oh-my-zsh"
-export ZSH_CUSTOM="$HOME/.zcustom"
+# My plugins (all deferred with wait'0' for faster startup)
+zi ice lucid wait'0'; zi light "zsh-users/zsh-syntax-highlighting"
+zi ice lucid wait'0'; zi light "zsh-users/zsh-completions"
+zi ice lucid wait'0'; zi light "zsh-users/zsh-autosuggestions"
+zi ice lucid wait'0'; zi snippet OMZP::git
+zi ice lucid wait'0'; zi snippet OMZP::eza
 
-#ZSH_THEME="ys"
+# Load Completions (rebuild cache if older than 24h, otherwise use cache)
+autoload -Uz compinit
+local old_dumps=(~/.zcompdump(N.mh+24))
+if (( $#old_dumps )); then
+  compinit
+else
+  compinit -C
+fi
 
-# Hyphen-insensitive completion. _ and - will be interchangeable.
-# Case-sensitive completion must be off.  
-HYPHEN_INSENSITIVE="true"
+# Update zinit once in a while
+RANDOM_NUMBER=$((RANDOM % 100 + 1))
+# Check for updates and install them
+if [[ $RANDOM_NUMBER -eq 1 ]]; then
+  zi self-update
+  zi update --parallel
+fi
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+eval "$(starship init zsh)"
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+LW_PATH=~/lunar
+GOPATH=~/go
+GOBIN="$GOPATH/bin"
+PATH="$GOBIN:$PATH"
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# save a lot of history
+HISTSIZE=1000000
+SAVEHIST=1000000
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups 
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+PATH="$PATH:$HOME/bin"
+PATH="$PATH:$HOME/.local/bin"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+export EDITOR="nvim"
 
-plugins=(
-  fzf
-  git
-  osx
-  ant
-  docker
-  docker-machine
-  docker-compose
-  nmap
-  rsync
-  sudo
-  tmux
-  ansible
-  zsh-z
-)
+alias lg="lazygit"
 
-plugins=(you-should-use $plugins)
+source "$HOME/.cargo/env"
 
-zstyle ':completion:*' menu select
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-fpath=("$HOME/.zfunctions" $fpath)
-source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
-
-autoload -U promptinit; promptinit
-zstyle :prompt:pure:prompt:success color green
-prompt pure
-
-function options() {
-    PLUGIN_PATH="$HOME/.oh-my-zsh/plugins/"
-    for plugin in $plugins; do
-        echo "\n\nPlugin: $plugin"; grep -r "^function \w*" $PLUGIN_PATH$plugin | awk '{print $2}' | sed 's/()//'| tr '\n' ', '; grep -r "^alias" $PLUGIN_PATH$plugin | awk '{print $2}' | sed 's/=.*//' |  tr '\n' ', '
-    done
+# Lazy-load pyenv (saves ~200ms)
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/shims:$PATH"
+pyenv() {
+  unfunction pyenv
+  eval "$(command pyenv init -)"
+  pyenv "$@"
 }
+# create new venv
+#   uv venv myenv
+# activate 
+#   source myenv/bin/activate
+# install package
+#   uv pip install the-package
 
-rga-fzf() {
-    RG_PREFIX="rga --files-with-matches --rga-cache-max-blob-len=10M"
-    local file
-    file="$(
-        FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
-            fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
-                --phony -q "$1" \
-                --bind "change:reload:$RG_PREFIX {q}" \
-                --preview-window="70%:wrap"
-    )" &&
-    echo "opening $file" &&
-    xdg-open "$file"
-}
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# bun completions
+[ -s "/Users/tbrixen/.bun/_bun" ] && source "/Users/tbrixen/.bun/_bun"
 
-export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+alias mkdir='mkdir -pv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias rmdir='rmdir -v'
 
-# Fix MacOS High Sierra issue with ansible cloudalchemy.node-exporter
-# https://github.com/ansible/ansible/issues/32499#issuecomment-341578864
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+# Case-insensitive completion (lowercase matches uppercase and vice versa)
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# Ctrl+Space to accept autosuggestion
+bindkey '^ ' autosuggest-accept
 
-# Press Ctrl + Space to accept and execute a suggestion from zsh-autosuggestions
-bindkey '^ ' autosuggest-execute
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-# Allow local customizations in the ~/.zshrc_local_after file
-if [ -f ~/.zshrc_local_after ]; then
-    source ~/.zshrc_local_after
-fi

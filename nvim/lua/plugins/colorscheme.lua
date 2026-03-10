@@ -4,6 +4,7 @@ return {
     lazy = false,
     name = "catppuccin",
     opts = {
+      transparent_background = true,
       flavour = "auto",
       background = { -- :h background
         light = "latte",
