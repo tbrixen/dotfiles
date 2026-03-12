@@ -25,11 +25,6 @@ zi ice lucid wait'0'; zi light "zsh-users/zsh-autosuggestions"
 zi ice lucid wait'0'; zi snippet OMZP::git
 zi ice lucid wait'0'; zi snippet OMZP::eza
 
-# Mac-specific plugins
-if [[ -n "$IS_MAC" ]]; then
-  zi ice wait lucid atload:"k8s_init tosb@lunar.app admin"; zi load "lunarway/lw-zsh"
-fi
-
 # Load Completions (rebuild cache if older than 24h, otherwise use cache)
 autoload -Uz compinit
 local old_dumps=(~/.zcompdump(N.mh+24))
@@ -48,10 +43,6 @@ PATH="$GOBIN:$PATH"
 PATH="$PATH:$HOME/bin"
 PATH="$PATH:$HOME/.local/bin"
 
-if [[ -n "$IS_MAC" ]]; then
-  export HAMCTL_OAUTH_IDP_URL=https://login.lunar.tech/oauth22eoZqaXcLD417
-fi
-
 alias lg="lazygit"
 alias mkdir='mkdir -pv'
 alias cp='cp -iv'
@@ -62,26 +53,6 @@ alias rmdir='rmdir -v'
 amp() {
   command amp --visibility private "$@"
 }
-if [[ -n "$IS_MAC" ]]; then
-  _load_wiz_creds() {
-    if [[ -z "$WIZ_CLIENT_ID" ]]; then
-      echo "🔐 Loading MCP credentials from 1Password..."
-      export WIZ_CLIENT_ID=$(op read --account=Lunar "op://Private/Wiz MCP/WIZ_CLIENT_ID")
-      export WIZ_CLIENT_SECRET=$(op read --account=Lunar "op://Private/Wiz MCP/WIZ_CLIENT_SECRET")
-      export WIZ_DATACENTER=$(op read --account=Lunar "op://Private/Wiz MCP/WIZ_DATACENTER")
-      echo "✅ MCP credentials loaded."
-    fi
-  }
-  ampwiz() {
-    _load_wiz_creds
-    command amp --visibility private "$@"
-  }
-  ampp() {
-    _load_wiz_creds
-    command amp "$@"
-  }
-fi
-
 # save a lot of history
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -118,31 +89,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-# Mac-specific environment
-if [[ -n "$IS_MAC" ]]; then
-  [[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
-  
-  # Added by LM Studio CLI (lms)
-  export PATH="$PATH:/Users/tbrixen/.lmstudio/bin"
-  # End of LM Studio CLI section
-
-  # PAI (Personal AI Infrastructure) Configuration
-  export PAI_DIR="$HOME/.claude"
-  export DA="Hal"
-  export DA_COLOR="cyan"
-  export ENGINEER_NAME="Tobias Stenby Brixen"
-fi
-
-
 # Case-insensitive completion (lowercase matches uppercase and vice versa)
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # Ctrl+Space to accept autosuggestion
 bindkey '^ ' autosuggest-accept
-
-if [[ -n "$IS_MAC" ]]; then
-  [[ -f "$HOME/lunar/gravity-tools/scripts/sync-hook.sh" ]] && source "$HOME/lunar/gravity-tools/scripts/sync-hook.sh"
-  alias gra-skill-sync='bash "/Users/tbrixen/lunar/gravity-tools/scripts/setup-skills.sh" --sync'
-fi
 
 # Machine-local overrides & secrets (not committed)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
