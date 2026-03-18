@@ -1,0 +1,42 @@
+#!/usr/bin/env zsh
+# tc — open a tmux session with Claude Code in the given (or current) directory
+
+target_dir="${1:-.}"
+target_dir="$(cd "$target_dir" 2>/dev/null && pwd)" || {
+  echo "tc: directory not found: $1" >&2
+  exit 1
+}
+
+# Derive session name from path relative to $HOME, sanitize for tmux
+session_name="${target_dir#$HOME/}"
+session_name="${session_name//[.:\/ ]/-}"
+
+# Check for existing session
+if tmux has-session -t "=$session_name" 2>/dev/null; then
+  echo "tmux session '$session_name' already exists."
+  echo -n "[R]eattach / [N]ew / [C]ancel? "
+  read -k1 choice
+  echo
+  case "$choice" in
+    r|R)
+      tmux attach-session -t "=$session_name"
+      exit
+      ;;
+    n|N)
+      local i=2
+      while tmux has-session -t "=${session_name}-${i}" 2>/dev/null; do
+        ((i++))
+      done
+      session_name="${session_name}-${i}"
+      ;;
+    *)
+      exit 0
+      ;;
+  esac
+fi
+
+# Set Ghostty tab title via OSC 1
+printf '\e]1;%s\e\\' "$session_name"
+
+# Create tmux session and run Claude Code inside it
+tmux new-session -s "$session_name" -c "$target_dir" "claude"

@@ -35,6 +35,7 @@ else
 fi
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 LW_PATH=~/lunar
 GOPATH=~/go
