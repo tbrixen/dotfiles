@@ -34,15 +34,15 @@ else
   compinit -C
 fi
 
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-
 LW_PATH=~/lunar
 GOPATH=~/go
 GOBIN="$GOPATH/bin"
 PATH="$GOBIN:$PATH"
 PATH="$PATH:$HOME/bin"
 PATH="$PATH:$HOME/.local/bin"
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 alias lg="lazygit"
 alias mkdir='mkdir -pv'
