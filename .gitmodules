@@ -28,9 +28,6 @@
 [submodule "tmux/plugins/tmux-fingers"]
 	path = tmux/plugins/tmux-fingers
 	url = https://github.com/Morantron/tmux-fingers
-[submodule "posh-extras/cd-extras"]
-	path = posh-extras/cd-extras
-	url = https://github.com/nickcox/cd-extras.git
 [submodule "zsh-extras/zcustom/plugins/zsh-z"]
 	path = zsh-extras/zcustom/plugins/zsh-z
 	url = https://github.com/agkozak/zsh-z
